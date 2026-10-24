@@ -22,9 +22,9 @@ class IngestTests(unittest.TestCase):
     def setUpClass(cls):
         cls.store, cls.counts = ingest.ingest_all()
 
-    def test_every_text_file_parsed_images_pdfs_deferred(self):
-        deferred = [f for f, n in self.counts.items() if n is None]
-        self.assertEqual(len(deferred), 15)
+    def test_every_file_parsed_including_extracted_pdfs_and_images(self):
+        self.assertEqual(len(self.counts), 94)
+        self.assertEqual([f for f, n in self.counts.items() if n is None], [])
 
     def test_observations_are_well_formed(self):
         for o in self.store.observations:
