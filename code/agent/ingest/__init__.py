@@ -8,19 +8,19 @@ from pathlib import Path
 
 from .. import cache, config, io
 from ..store import ObservationStore
-from . import json_, logs, sql, text
+from . import json_, logs, multimodal, sql, text
 
 log = logging.getLogger(__name__)
 
 CACHE_NAME = "observations.json"
 PARSERS = {".sql": sql.parse, ".json": json_.parse, ".log": logs.parse, ".txt": text.parse}
-DEFERRED = {".pdf", ".png"}      # multimodal extraction, handled by a later stage
+MULTIMODAL = {".pdf", ".png"}    # rows come from the extraction cache (see multimodal.py)
 _CODE = sorted(Path(__file__).parent.glob("*.py")) + [Path(__file__).parents[1] / f
                                                       for f in ("store.py", "config.py")]
 
 
 def ingest_all(use_cache: bool = True) -> tuple[ObservationStore, dict]:
-    """Return the populated store and a per-file observation count (None = deferred)."""
+    """Return the populated store and a per-file observation count (None = not extracted yet)."""
     manifest = io.load_manifest()
     key = _fingerprint(manifest)
     if use_cache:
@@ -38,8 +38,11 @@ def _parse_all(manifest: list[dict]) -> tuple[ObservationStore, dict]:
     for evidence in manifest:
         path = config.DATASET / evidence["file_path"]
         suffix = path.suffix.lower()
-        if suffix in DEFERRED:
-            counts[evidence["file_id"]] = None
+        if suffix in MULTIMODAL:
+            observations = multimodal.observations(evidence)
+            for obs in observations or []:
+                store.add(obs)
+            counts[evidence["file_id"]] = None if observations is None else len(observations)
             continue
         parser = PARSERS.get(suffix)
         if parser is None:
@@ -58,4 +61,5 @@ def _fingerprint(manifest: list[dict]) -> str:
     files = [config.DATASET / "evidence_files.csv"]
     files += [config.DATASET / e["file_path"] for e in manifest
               if Path(e["file_path"]).suffix.lower() in PARSERS]
-    return cache.fingerprint(files + _CODE)
+    extracted = sorted((config.CACHE / "extracted").glob("*.json"))
+    return cache.fingerprint(files + extracted + _CODE)

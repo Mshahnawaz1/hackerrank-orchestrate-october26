@@ -19,6 +19,15 @@ def fingerprint(paths, extra: str = "") -> str:
     return h.hexdigest()
 
 
+def digest(*parts) -> str:
+    """sha256 over text/bytes parts, for fingerprints built from values rather than files."""
+    h = hashlib.sha256()
+    for part in parts:
+        h.update(part if isinstance(part, bytes) else str(part).encode("utf-8"))
+        h.update(b"\0")
+    return h.hexdigest()
+
+
 def load(name: str, expected_fingerprint: str | None = None):
     """Return the cached payload, or None when missing, unreadable or stale."""
     path = config.CACHE / name

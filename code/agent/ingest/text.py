@@ -6,7 +6,8 @@ from .common import build_observation
 LINE_RE = re.compile(r"^-\s*(\S+)\s*\|\s*(\S+)\s*\|\s*(\S+)\s*\|\s*(\S+)\s*\|\s*(\S+)\s*\|\s*(.+?)\s*$")
 
 
-def parse(evidence: dict, path) -> list:
+def parse(evidence: dict, path) -> tuple[list, list]:
+    """Return (observations, coverage); these sources never enumerate a whole copy."""
     out = []
     for line in path.read_text(encoding="utf-8").splitlines():
         m = LINE_RE.match(line)
@@ -19,4 +20,4 @@ def parse(evidence: dict, path) -> list:
                                 record=record, observed_at=recorded_at, system_id=system)
         if obs:
             out.append(obs)
-    return out
+    return out, []

@@ -7,7 +7,7 @@ from .identity import IdentitySet
 from .ingest.common import LOOKUP_KEYS
 from .store import Observation, ObservationStore, extract_identifiers
 
-RESOURCE_RE = re.compile(r"^(?:account|search|support|export|analytics|data_flow|backup|audit_record|tombstone)_\d+$")
+RESOURCE_RE = re.compile(r"^(?:account|search|support|export|analytics|data_flow|backup|audit_record|tombstone|marketing|email_delivery|cache|legal_hold|object)_\d+$")
 # fields that point at another resource of the same subject (e.g. a search document's source account)
 REFERENCE_KEYS = ("source_resource_id",)
 ACCOUNT_PREFIX = "account_"

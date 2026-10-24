@@ -7,6 +7,8 @@ Usage:
   python3 code/main.py --case case_01 --trace  # explain one case
   python3 code/main.py --ingest-report  # observation counts per evidence file
   python3 code/main.py --rebuild-cache  # re-parse evidence and refresh code/cache/, then run
+  python3 code/main.py --extract        # PDFs/images -> text -> LLM rows, cached in code/cache/
+  python3 code/main.py --extract --no-llm  # text extraction only
 """
 import argparse
 import sys
@@ -15,12 +17,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from agent import config, ingest, io, pipeline, serialize, trace  # noqa: E402
+from agent.ingest import multimodal  # noqa: E402
 
 
 def ingest_report(use_cache: bool) -> None:
     store, counts = ingest.ingest_all(use_cache=use_cache)
     for file_id, n in counts.items():
-        print(f"{file_id}\t{'deferred' if n is None else n}")
+        print(f"{file_id}\t{'not extracted' if n is None else n}")
     print(f"total observations: {len(store)}; coverage records: {len(store.coverage)}")
 
 
@@ -31,9 +34,19 @@ def main() -> int:
     ap.add_argument("--out", type=Path, help="output path (default: repo-root output.csv; none for --sample)")
     ap.add_argument("--trace", action="store_true", help="with --case: explain the decision")
     ap.add_argument("--ingest-report", action="store_true", help="print observation counts per file")
+    ap.add_argument("--extract", action="store_true", help="extract text from PDFs/images and format with the LLM")
+    ap.add_argument("--no-llm", action="store_true", help="with --extract: skip the LLM formatting step")
+    ap.add_argument("--force", action="store_true", help="with --extract: ignore cached results")
     ap.add_argument("--rebuild-cache", action="store_true", help="ignore code/cache/ and rebuild it")
     args = ap.parse_args()
 
+    if args.extract:
+        def progress(file_id, path, result):
+            print(f"{file_id}\t{Path(path).name}\t{'working...' if result is None else result}", flush=True)
+
+        outcome = multimodal.run(use_llm=not args.no_llm, force=args.force, progress=progress)
+        print(multimodal.summary(outcome))
+        return 0
     if args.ingest_report:
         ingest_report(use_cache=not args.rebuild_cache)
         return 0

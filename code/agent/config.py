@@ -7,6 +7,11 @@ EVIDENCE = DATASET / "evidence"
 CACHE = REPO_ROOT / "code" / "cache"
 OUTPUT = REPO_ROOT / "output.csv"
 
+# LLM provider: OpenRouter (OpenAI-compatible). Key, base URL and model come from the environment
+# or the uncommitted .env file; see .env.example.
+DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+USAGE_LOG = CACHE / "usage.jsonl"
+
 STATUSES = ("COMPLETE", "INCOMPLETE", "NOT_APPLICABLE")
 FALLBACK_STATUS = "INCOMPLETE"
 
@@ -49,6 +54,11 @@ PREFIX_SYSTEM = {
     "search_": "search_service",
     "support_": "support_platform",
     "tombstone_": "identity_service",
+    "marketing_": "marketing_platform",
+    "object_": "object_storage",
+    "cache_": "cache_service",
+    "email_delivery_": "email_delivery_service",
+    "legal_hold_": "legal_service",
 }
 
 # table / collection name fragment -> deletion_rules data_category
@@ -83,6 +93,11 @@ PREFIX_CATEGORY = {
     "search_": "SEARCH_INDEX_ENTRY",
     "support_": "SUPPORT_MESSAGE",
     "tombstone_": "ACCOUNT_TOMBSTONE",
+    "marketing_": "MARKETING_PROFILE",
+    "object_": "SUPPORT_ATTACHMENT",
+    "cache_": "CACHE_ENTRY",
+    "email_delivery_": "EMAIL_DELIVERY_LOG",
+    "legal_hold_": "LEGAL_HOLD_RECORD",
 }
 
 # data_category -> owning system (for tables whose rows do not name their system)
