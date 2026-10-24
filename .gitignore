@@ -1,2 +1,4 @@
 .env
 **__pycache__
+# derived, rebuilt automatically from dataset/ (2+ MB)
+code/cache/observations.json

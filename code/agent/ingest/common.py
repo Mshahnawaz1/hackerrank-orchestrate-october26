@@ -1,6 +1,6 @@
 """Shared record -> Observation conversion used by every parser."""
 from .. import config
-from ..store import Observation, extract_identifiers
+from ..store import Coverage, Observation, extract_identifiers
 
 # alternate spellings of the lookup key across log formats
 LOOKUP_KEYS = ("lookup_key", "match_key", "subject_key", "scan_key", "subject_ref", "correlation_key")
@@ -89,3 +89,14 @@ def build_observation(*, evidence, source_kind, collection, record, observed_at,
         copy=copy,
         is_claim=is_claim,
     )
+
+
+def build_coverage(*, evidence, source_kind, collection, observed_at, system_id, resource_ids,
+                   copy="") -> Coverage | None:
+    """Record that a snapshot enumerated `collection` of `system_id`; None if the system is unknown."""
+    system = system_id or config.CATEGORY_SYSTEM.get(category_for(collection) or "", "")
+    if not system:
+        return None
+    return Coverage(evidence_id=evidence["file_id"], source_kind=source_kind, observed_at=observed_at,
+                    captured_at=evidence["captured_at"], system_id=system, collection=collection,
+                    copy=copy or collection, resource_ids=frozenset(resource_ids))

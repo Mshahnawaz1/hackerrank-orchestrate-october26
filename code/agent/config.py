@@ -48,6 +48,7 @@ PREFIX_SYSTEM = {
     "export_": "export_service",
     "search_": "search_service",
     "support_": "support_platform",
+    "tombstone_": "identity_service",
 }
 
 # table / collection name fragment -> deletion_rules data_category
@@ -81,6 +82,22 @@ PREFIX_CATEGORY = {
     "export_": "USER_EXPORT",
     "search_": "SEARCH_INDEX_ENTRY",
     "support_": "SUPPORT_MESSAGE",
+    "tombstone_": "ACCOUNT_TOMBSTONE",
+}
+
+# data_category -> owning system (for tables whose rows do not name their system)
+CATEGORY_SYSTEM = {
+    "USER_PROFILE": "account_service",
+    "SEARCH_INDEX_ENTRY": "search_service",
+    "ANALYTICS_PROFILE": "analytics_platform",
+    "SUPPORT_MESSAGE": "support_platform",
+    "SUPPORT_ATTACHMENT": "support_platform",
+    "USER_EXPORT": "export_service",
+    "DATA_FLOW": "integration_service",
+    "BACKUP_ARCHIVE": "backup_service",
+    "SECURITY_AUDIT_LOG": "security_service",
+    "ACCOUNT_TOMBSTONE": "identity_service",
+    "LEGAL_HOLD_RECORD": "legal_service",
 }
 
 # explicit result vocabulary -> observation state

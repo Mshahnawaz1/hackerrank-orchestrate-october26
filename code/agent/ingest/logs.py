@@ -16,7 +16,8 @@ EVENTS = {"record_lookup", "analytics_profile_read", "message_pii_scan", "attach
           "analytics_identity_scan", "connector_heartbeat", "restore_candidate_evaluated"}
 
 
-def parse(evidence: dict, path) -> list:
+def parse(evidence: dict, path) -> tuple[list, list]:
+    """Return (observations, coverage); these sources never enumerate a whole copy."""
     events = [e for e in (_parse_line(l) for l in path.read_text(encoding="utf-8").splitlines()) if e]
     keys = {}
     for e in events:
@@ -35,7 +36,7 @@ def parse(evidence: dict, path) -> list:
                                 record=record, observed_at=e["ts"], system_id=e.get("service", ""))
         if obs:
             out.append(obs)
-    return out
+    return out, []
 
 
 def _kv(text: str) -> dict:

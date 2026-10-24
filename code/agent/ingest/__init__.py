@@ -1,21 +1,41 @@
-"""Evidence ingestion: dispatch every manifest file to its parser and fill the ObservationStore."""
-import logging
+"""Evidence ingestion (one-time, cached): parse every manifest file into the ObservationStore.
 
-from .. import config, io
+The result is cached in code/cache/observations.json, keyed by a fingerprint of the manifest,
+the parsed evidence files and the ingestion code, so any change to either triggers a rebuild.
+"""
+import logging
+from pathlib import Path
+
+from .. import cache, config, io
 from ..store import ObservationStore
 from . import json_, logs, sql, text
 
 log = logging.getLogger(__name__)
 
+CACHE_NAME = "observations.json"
 PARSERS = {".sql": sql.parse, ".json": json_.parse, ".log": logs.parse, ".txt": text.parse}
 DEFERRED = {".pdf", ".png"}      # multimodal extraction, handled by a later stage
+_CODE = sorted(Path(__file__).parent.glob("*.py")) + [Path(__file__).parents[1] / f
+                                                      for f in ("store.py", "config.py")]
 
 
-def ingest_all() -> tuple[ObservationStore, dict]:
+def ingest_all(use_cache: bool = True) -> tuple[ObservationStore, dict]:
     """Return the populated store and a per-file observation count (None = deferred)."""
+    manifest = io.load_manifest()
+    key = _fingerprint(manifest)
+    if use_cache:
+        cached = cache.load(CACHE_NAME, key)
+        if cached is not None:
+            return ObservationStore.from_dict(cached["store"]), cached["counts"]
+    store, counts = _parse_all(manifest)
+    cache.save(CACHE_NAME, {"store": store.to_dict(), "counts": counts}, key)
+    return store, counts
+
+
+def _parse_all(manifest: list[dict]) -> tuple[ObservationStore, dict]:
     store = ObservationStore()
     counts = {}
-    for evidence in io.load_manifest():
+    for evidence in manifest:
         path = config.DATASET / evidence["file_path"]
         suffix = path.suffix.lower()
         if suffix in DEFERRED:
@@ -25,8 +45,17 @@ def ingest_all() -> tuple[ObservationStore, dict]:
         if parser is None:
             log.warning("no parser for %s", evidence["file_path"])
             continue
-        observations = parser(evidence, path)
+        observations, coverage = parser(evidence, path)
         for obs in observations:
             store.add(obs)
+        for cov in coverage:
+            store.add_coverage(cov)
         counts[evidence["file_id"]] = len(observations)
     return store, counts
+
+
+def _fingerprint(manifest: list[dict]) -> str:
+    files = [config.DATASET / "evidence_files.csv"]
+    files += [config.DATASET / e["file_path"] for e in manifest
+              if Path(e["file_path"]).suffix.lower() in PARSERS]
+    return cache.fingerprint(files + _CODE)

@@ -302,3 +302,64 @@ branch=main
 repo_root=/home/frontier/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T20:59:34Z] Validate implementation against PRD
+
+User Prompt (verbatim, secrets redacted):
+check the current implementation and validate if the implementation align with the @PRD.md
+
+Agent Response Summary:
+Audited the code against PRD sections 5, 7, 8 and 11 and ran data-level checks: tests pass, output is byte-identical across runs, and 70/75 evidence citations in sample_output resolve to an ingested observation. Found gaps: absence-by-omission (empty or partial snapshots) cannot be represented; activity rows are not ingested as claims; the validator misses several PRD 7.4-I invariants; --trace, --no-llm, the evidence-accuracy metric, custom cases and the README are missing. No code was changed.
+
+Actions:
+* Ran unit tests, two full runs (md5 compare), sample-citation coverage script, observation timing checks
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T21:08:55Z] One-time cached stages: ingestion + intent caches
+
+User Prompt (verbatim, secrets redacted):
+implement the one time cached section of architecture and store the results in cache, for now skip the one using LLM.
+
+Agent Response Summary:
+Implemented the non-LLM part of the PRD's one-time cached section. Added agent/cache.py (fingerprinted, deterministic JSON cache); ingestion now caches the ObservationStore in code/cache/observations.json (keyed on manifest, evidence and ingestion code) and records Coverage (absence-by-omission) for SQL tables and snapshot-bundle collections (371 records), which covers the evidence_54/51/90 citation gap. Intent results are cached in code/cache/intent.json keyed by sha256(text) with a rules-version tag; LLM entries will be preserved later. Multimodal extraction (LLM) skipped. 18 tests pass; output.csv unchanged.
+
+Actions:
+* Created code/agent/cache.py, code/tests/test_cache.py, code/cache/{observations,intent}.json
+* Edited store.py (Coverage, to_dict/from_dict), ingest/* (coverage, cache), intent.py (classify_cached), pipeline.py, config.py (CATEGORY_SYSTEM), main.py (--rebuild-cache), .gitignore
+* Ran tests, rebuilds, md5 determinism checks
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T21:27:21Z] Implement per-case agents (identity, linker, state, policy, planner, trace)
+
+User Prompt (verbatim, secrets redacted):
+implement the agents
+
+Agent Response Summary:
+Implemented the per-case agents from PRD 7.4 D-H plus trace: identity.py (current + audit-log history, recomputed hashes), activity.py (claims index, LINK_RESOURCE_IDENTITY, assignment of deletion-workflow rows to requests per reported_at batch), linker.py (exact identifier links incl. weak lookup-key links, workflow/link seeds, reference closure, audit_at visibility), state.py (per-copy latest state, coverage-based absence, replica drift, exposure), policy.py (deletion_rules.csv + flow/backup), planner.py, trace.py; pipeline.py wires them with a shared Context. SQL rows now observed at snapshot time. Sample scores: status 93.75%, step F1 0.963, sequence 0.75; full run 518 valid rows, deterministic, ~1.6s. Remaining sample misses depend on image/PDF evidence (multimodal stage) or ambiguous activity batches.
+
+Actions:
+* Created code/agent/{identity,activity,linker,state,policy,planner,trace}.py, code/tests/test_agents.py
+* Edited code/agent/pipeline.py, code/agent/ingest/sql.py, code/agent/config.py, code/main.py (--trace)
+* Ran evaluation, full runs (md5 determinism), unit tests (25 pass)
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

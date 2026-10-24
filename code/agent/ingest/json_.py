@@ -1,20 +1,31 @@
 """JSON evidence (snapshot bundles, service exports, result ledgers) -> observations."""
 import json
 
-from .common import build_observation
+from .common import build_coverage, build_observation
+
+# lookup-style collections report individual queries, not a full enumeration
+LOOKUP_COLLECTIONS = {"operational_record_history"}
 
 
-def parse(evidence: dict, path) -> list:
+def parse(evidence: dict, path) -> tuple[list, list]:
+    """Return (observations, coverage). Only snapshot-bundle collections yield coverage."""
     doc = json.loads(path.read_text(encoding="utf-8"))
     file_time = doc.get("exported_at") or doc.get("captured_at") or evidence["captured_at"]
-    out = []
+    out, coverage = [], []
     for collection, system, observed_at, records in _groups(doc, file_time):
+        found = []
         for record in records:
             obs = build_observation(evidence=evidence, source_kind="json", collection=collection,
                                     record=record, observed_at=observed_at, system_id=system)
             if obs:
                 out.append(obs)
-    return out
+                found.append(obs.resource_id)
+        if "snapshots" in doc and collection not in LOOKUP_COLLECTIONS:
+            cov = build_coverage(evidence=evidence, source_kind="json", collection=collection,
+                                 observed_at=observed_at, system_id=system, resource_ids=found)
+            if cov:
+                coverage.append(cov)
+    return out, coverage
 
 
 def _groups(doc: dict, file_time: str):

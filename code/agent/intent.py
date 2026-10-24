@@ -7,11 +7,22 @@ Rules only (v1). Every result carries one of three confidence levels:
   MEDIUM  a single signal (deletion verb alone, non-deletion intent alone, or a bare negation)
   LOW     no signal, or deletion and non-deletion signals conflict. `authorizes_deletion`
           is None and `needs_llm` is True; an LLM fallback is planned for these.
+
+`classify_cached` memoizes results in code/cache/intent.json keyed by sha256(request_text).
+Rule entries are tagged with a hash of this module and recomputed when the rules change;
+entries from any other source (the future LLM stage) are kept as they are.
 """
+import hashlib
 import re
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
+from pathlib import Path
+
+from . import cache
 
 HIGH, MEDIUM, LOW = "HIGH", "MEDIUM", "LOW"
+CACHE_NAME = "intent.json"
+RULES_SOURCE = "rules"
+RULES_VERSION = cache.fingerprint([Path(__file__)])[:16]
 
 _FLAGS = re.IGNORECASE
 
@@ -83,3 +94,24 @@ def classify(request_text: str) -> IntentResult:
     if other:
         return IntentResult(False, other, HIGH if KEEP_ACCOUNT.search(text) else MEDIUM)
     return IntentResult(None, "UNKNOWN", LOW)
+
+
+def text_key(request_text: str) -> str:
+    return hashlib.sha256((request_text or "").encode("utf-8")).hexdigest()
+
+
+def classify_cached(texts) -> dict[str, IntentResult]:
+    """Classify each unique text once, reusing and updating the on-disk cache. Keyed by text."""
+    entries = cache.load(CACHE_NAME) or {}
+    results, changed = {}, False
+    for text in sorted(set(texts)):
+        key = text_key(text)
+        entry = entries.get(key)
+        if entry is None or (entry["source"] == RULES_SOURCE and entry["version"] != RULES_VERSION):
+            entry = {**asdict(classify(text)), "source": RULES_SOURCE, "version": RULES_VERSION}
+            entries[key] = entry
+            changed = True
+        results[text] = IntentResult(entry["authorizes_deletion"], entry["intent"], entry["confidence"])
+    if changed:
+        cache.save(CACHE_NAME, entries)
+    return results
