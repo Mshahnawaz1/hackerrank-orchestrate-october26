@@ -1,0 +1,149 @@
+{
+ "fingerprint": "cec59a989bd04e0a0e5de843ee80e80a429a6fb1a88f31fdf531525d5065a577",
+ "payload": {
+  "captured_at": "2026-05-29T08:00:00Z",
+  "dropped": [],
+  "file_id": "evidence_27",
+  "file_path": "evidence/documents/legal_retention_register_20260529.pdf",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "prompt_version": "2",
+  "raw_rows": [
+   {
+    "identifiers": [
+     "user_08"
+    ],
+    "notes": "Amount: USD 184.20; Retain until: 04 May 2033; Reference: AR",
+    "record_type": "Card dispute",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "04 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_12"
+    ],
+    "notes": "Amount: EUR 72.40; Retain until: 09 May 2033; Reference: ML",
+    "record_type": "Tax correction",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "09 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_17"
+    ],
+    "notes": "Amount: GBP 219.00; Retain until: 14 May 2033; Reference: SK",
+    "record_type": "Chargeback",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "14 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_21"
+    ],
+    "notes": "Amount: CAD 96.55; Retain until: 18 May 2033; Reference: AR",
+    "record_type": "Invoice inquiry",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "18 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_24"
+    ],
+    "notes": "Amount: AUD 311.80; Retain until: 23 May 2033; Reference: ML",
+    "record_type": "Card dispute",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "23 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_29"
+    ],
+    "notes": "Amount: USD 48.75; Retain until: 28 May 2033; Reference: SK",
+    "record_type": "Tax record",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "28 May 2026"
+   }
+  ],
+  "rows": [
+   {
+    "identifiers": [
+     "user_08"
+    ],
+    "notes": "Amount: USD 184.20; Retain until: 04 May 2033; Reference: AR",
+    "record_type": "Card dispute",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "04 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_12"
+    ],
+    "notes": "Amount: EUR 72.40; Retain until: 09 May 2033; Reference: ML",
+    "record_type": "Tax correction",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "09 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_17"
+    ],
+    "notes": "Amount: GBP 219.00; Retain until: 14 May 2033; Reference: SK",
+    "record_type": "Chargeback",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "14 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_21"
+    ],
+    "notes": "Amount: CAD 96.55; Retain until: 18 May 2033; Reference: AR",
+    "record_type": "Invoice inquiry",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "18 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_24"
+    ],
+    "notes": "Amount: AUD 311.80; Retain until: 23 May 2033; Reference: ML",
+    "record_type": "Card dispute",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "23 May 2026"
+   },
+   {
+    "identifiers": [
+     "user_29"
+    ],
+    "notes": "Amount: USD 48.75; Retain until: 28 May 2033; Reference: SK",
+    "record_type": "Tax record",
+    "resource_id": null,
+    "status": "retained",
+    "system": "finance_operations",
+    "timestamp": "28 May 2026"
+   }
+  ],
+  "uncovered_resource_ids": [],
+  "validation_version": "2"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "fingerprint": "270c453ecc83e994a43835ad0cbcc8f172dc4c48409c71acac5a0f1dbc4a402d",
+ "payload": {
+  "file_path": "evidence/images/search_index_inspector_20260901.png",
+  "text": ":9.Si @gmai Pr i\n<> Northstar Shop Search Console 2 email:g.silva76@gmail.com oduction Help (SC\nNorthstar Shop / Search Console / Customer Search\nCustomer Search A :\n| 0 Customer Search = 2*ts Filter Export Yeieyts\n— mer_dir r rod-\noO Broduct'Search customer_directory_v3 / prod-eu\n= Results (2) Query details Shard timing\n|_| Order Search\na Indexes Executed Latency Index Environment Shard tota\n01 Sep 2026 06:00:14 UTC 184 ms customer_directory_v3 prod-eu 184 ms\na} Cluster health\n{| Slow queries Results (2) Updated moments ago - 2 records Raw document - search_428\n_id Display name Email Customer reference Score Last indexed index customer_directory_v3\n1 search_428 Gabriel Silva g.silva76@gmail.com user_13 9.84 05:58:21 UTC id search_428\n2) search_1874 = g.silva76,jr@gmail.com - 4.12 05:55:03 UTC display_name Gabriel Silva\nemail g.silva76@gmail.com\ncustomer_reference user_13\nindexed_at 2026-09-01T05:58:21Z\nActivity\n@ 06:00:14\nemail:g.silva76@gmail.com - 2 hits\n@ 05:42:03\ncustomer_reference:user_9842 : 1 hit\n@ 05:31:18\ndisplay_name:*Aditi Jain\" - 1 hit\n"
+ }
+}

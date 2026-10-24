@@ -1,0 +1,7 @@
+{
+ "fingerprint": "2832f7f72a4319a974580a7823976408303368a010b84cc886c4d6271c4bdcc9",
+ "payload": {
+  "file_path": "evidence/documents/legal_retention_register_20260529.pdf",
+  "text": "DISPUTED ORDERS AND TAX RECORDS REGISTER\nFinance Operations | May 2026\nRegister details\nRecord | Register month May 2026\nDetail | owner Finance Records\nDetail | classification Internal\ngenerated 29 May 2026 08 | 00 UTC\nDetail | For each row add invoice date, finance owner, retain-until date, and case/reference number\n\nDISPUTED ORDERS AND TAX RECORDS REGISTER\nContinued - Review and custody notes\nDisputed order entries\n1 | ORD-20264118 | user_08 | Card dispute | 04 May 2026 | USD 184.20 | Retain until 04 May 2033 | AR\n2 | ORD-20264207 | user_12 | Tax correction | 09 May 2026 | EUR 72.40 | Retain until 09 May 2033 | ML\n3 | ORD-20264319 | user_17 | Chargeback | 14 May 2026 | GBP 219.00 | Retain until 14 May 2033 | SK\n4 | ORD-20264402 | user_21 | Invoice inquiry | 18 May 2026 | CAD 96.55 | Retain until 18 May 2033 | AR\n5 | ORD-20264511 | user_24 | Card dispute | 23 May 2026 | AUD 311.80 | Retain until 23 May 2033 | ML\n6 | ORD-20264600 | user_29 | Tax record | 28 May 2026 | USD 48.75 | Retain until 28 May 2033 | SK\n"
+ }
+}

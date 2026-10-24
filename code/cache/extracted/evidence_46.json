@@ -1,0 +1,187 @@
+{
+ "fingerprint": "55b68ef6b99813e9d0ec137c6b08f2ca26a6a8d4799ccea2f41822ee57eb25ff",
+ "payload": {
+  "captured_at": "2026-02-13T08:00:00Z",
+  "dropped": [
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 712 KB, Storage class Standard, Version v1, Content type application/pdf, Encryption AES-256",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "11 Feb 2026 14:17 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 203 KB, Storage class Standard, Version v1",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "10 Feb 2026 09:33 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 198 KB, Storage class Standard, Version v2, Uploader support-service",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "11 Feb 2026 16:05 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 318 KB, Storage class Standard, Version v1",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "10 Feb 2026 11:21 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 2.4 MB, Storage class Standard, Version v1",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "12 Feb 2026 10:08 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 128 MB, Storage class Standard, Version v1, Activity: 12 Feb 18:42 - metadata update",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "10 Feb 2026 23:14 UTC"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Size 131 MB, Storage class Standard, Version v1/v2, Activity: 12 Feb 18:39 - upload complete, 12 Feb 18:38 - object created",
+     "record_type": "STORAGE_OBJECT",
+     "resource_id": null,
+     "status": null,
+     "system": "nimbus_object_storage",
+     "timestamp": "12 Feb 2026 21:56 UTC"
+    }
+   }
+  ],
+  "file_id": "evidence_46",
+  "file_path": "evidence/images/object_storage_browser_20260213.png",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "prompt_version": "2",
+  "raw_rows": [
+   {
+    "identifiers": [
+     "e71b6d..."
+    ],
+    "notes": "Size 684 KB, Storage class Standard, Version v3, Content type application/pdf, Encryption AES-256",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "12 Feb 2026 18:42 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 712 KB, Storage class Standard, Version v1, Content type application/pdf, Encryption AES-256",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "11 Feb 2026 14:17 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 203 KB, Storage class Standard, Version v1",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "10 Feb 2026 09:33 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 198 KB, Storage class Standard, Version v2, Uploader support-service",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "11 Feb 2026 16:05 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 318 KB, Storage class Standard, Version v1",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "10 Feb 2026 11:21 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 2.4 MB, Storage class Standard, Version v1",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "12 Feb 2026 10:08 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 128 MB, Storage class Standard, Version v1, Activity: 12 Feb 18:42 - metadata update",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "10 Feb 2026 23:14 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Size 131 MB, Storage class Standard, Version v1/v2, Activity: 12 Feb 18:39 - upload complete, 12 Feb 18:38 - object created",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "12 Feb 2026 21:56 UTC"
+   }
+  ],
+  "rows": [
+   {
+    "identifiers": [
+     "e71b6d..."
+    ],
+    "notes": "Size 684 KB, Storage class Standard, Version v3, Content type application/pdf, Encryption AES-256",
+    "record_type": "STORAGE_OBJECT",
+    "resource_id": null,
+    "status": null,
+    "system": "nimbus_object_storage",
+    "timestamp": "12 Feb 2026 18:42 UTC"
+   }
+  ],
+  "uncovered_resource_ids": [],
+  "validation_version": "2"
+ }
+}

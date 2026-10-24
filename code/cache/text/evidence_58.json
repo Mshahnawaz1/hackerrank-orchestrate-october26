@@ -1,0 +1,7 @@
+{
+ "fingerprint": "50146d2f1413ba431709a53257a32084bffe21b8f1ae890ca42dbeedf12235da",
+ "payload": {
+  "file_path": "evidence/documents/delivery_correction_attachment.pdf",
+  "text": "DELIVERY ADDRESS CORRECTION REQUEST\nSupport reference CS-4827 / support_001\nCustomer request\nRecord | Northstar Shop Delivery Address Correction Request\nDetail | reference CS-4827 / support_001\nDetail | received 18 Jun 2026\nDetail | Priya Raman\nDetail | priya.raman@gmail.com\nDetail | +91 98765 73142\nDetail | order ORD-20264827\nDetail | preferred contact SMS\nsubmitted 18 Jun 2026 10 | 24 UTC\nCustomer request | change apartment number from 14B to 18B and call before delivery\nProduct | Stainless steel water bottle, quantity 2\nDetail | carrier SwiftShip\n\nDELIVERY ADDRESS CORRECTION REQUEST\nContinued - Attachment properties and upload history\nOrder and delivery details\nRecord | file delivery_address_correction.pdf\nDetail | 312 KB\nDetail | ticket CS-4827\nDetail | region ap-south\nDetail | uploader customer\ncaptured 12 Sep 2026 07 | 30 UTC\nDetail | checksum prefix c90a42\n"
+ }
+}

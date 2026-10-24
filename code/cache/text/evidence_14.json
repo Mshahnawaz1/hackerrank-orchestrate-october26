@@ -1,0 +1,7 @@
+{
+ "fingerprint": "9e7cb2444870ff7f1c446fefe9a73c65791fc98ddf7ab86231edb30f7ccca7cd",
+ "payload": {
+  "file_path": "evidence/images/connector_management_console_20260807.png",
+  "text": "i Production Hel B\n<> Northstar Shop BridgeOps 9 Search connectors... p\nNorthstar Shop / BridgeOps / Connections\nConnections ° ;\n| 0 Connections 12 connectors Filter Export teens\n= PRODUCTION - eu-west - 07 Aug 2026 08:00 UTC\n|_| Topology\n= Topology Throughput Recent deliveries\n|__| Monitoring\na Events Healthy Events / hour Delivery p95 Backlog Destination health\n12 4,113 185s 18 Healthy\na} Destinations\n|_| Settings Topology Updated moments ago : 4 records data_flow_1121\nConnector Destination Selector Mode Events/hour Last contact Status Healthy\n1 data_flow_1121 customer_analytics_warehouse jain.aditi@gmail.com Continuous 1,284 07:59:42 Owner Data Platform\n2| data_flow_9846 customer_analytics_warehouse lucia-torres@gmail.com Continuous 842 07:59:36 Destination customer_analytics_warehouse\nSelector jain.aditi@gmail.com\n3 Order notifications notification_service order events Continuous 650 07:59:28\nSync mode Continuous sync\n4 Delivery tracking logistics_warehouse shipment events Continuous 420 07:59:13\nLast response 200 OK -1.8s\nActivity\n@ 07:59:42\n124 events delivered\n@ 07:58:10\ncheckpoint committed\n@ 07:56:44\n18 events retried\n@ 07:55:02\ndestination acknowledged batch\n"
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "fingerprint": "5397d371b765a634c0ebbbc9b1f906ff712c4d589dab11b02603999f309beef5",
+ "payload": {
+  "captured_at": "2026-08-07T08:00:00Z",
+  "dropped": [
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Connector: Order notifications, Destination: notification_service, Selector: order events, Mode: Continuous, Events/hour: 650",
+     "record_type": "CONNECTOR",
+     "resource_id": null,
+     "status": "Sync mode Continuous sync",
+     "system": "Northstar Shop BridgeOps",
+     "timestamp": "07:59:28"
+    }
+   },
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Connector: Delivery tracking, Destination: logistics_warehouse, Selector: shipment events, Mode: Continuous, Events/hour: 420",
+     "record_type": "CONNECTOR",
+     "resource_id": null,
+     "status": "Last response 200 OK -1.8s",
+     "system": "Northstar Shop BridgeOps",
+     "timestamp": "07:59:13"
+    }
+   }
+  ],
+  "file_id": "evidence_14",
+  "file_path": "evidence/images/connector_management_console_20260807.png",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "prompt_version": "2",
+  "raw_rows": [
+   {
+    "identifiers": [
+     "jain.aditi@gmail.com"
+    ],
+    "notes": "Destination: customer_analytics_warehouse, Mode: Continuous, Events/hour: 1,284",
+    "record_type": "DATA_FLOW",
+    "resource_id": "data_flow_1121",
+    "status": "Owner Data Platform",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:42"
+   },
+   {
+    "identifiers": [
+     "lucia-torres@gmail.com",
+     "jain.aditi@gmail.com"
+    ],
+    "notes": "Destination: customer_analytics_warehouse, Mode: Continuous, Events/hour: 842",
+    "record_type": "DATA_FLOW",
+    "resource_id": "data_flow_9846",
+    "status": null,
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:36"
+   },
+   {
+    "identifiers": [],
+    "notes": "4 records",
+    "record_type": "TOPOLOGY_SUMMARY",
+    "resource_id": "data_flow_1121",
+    "status": "Updated moments ago",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07 Aug 2026 08:00 UTC"
+   },
+   {
+    "identifiers": [],
+    "notes": "Connector: Order notifications, Destination: notification_service, Selector: order events, Mode: Continuous, Events/hour: 650",
+    "record_type": "CONNECTOR",
+    "resource_id": null,
+    "status": "Sync mode Continuous sync",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:28"
+   },
+   {
+    "identifiers": [],
+    "notes": "Connector: Delivery tracking, Destination: logistics_warehouse, Selector: shipment events, Mode: Continuous, Events/hour: 420",
+    "record_type": "CONNECTOR",
+    "resource_id": null,
+    "status": "Last response 200 OK -1.8s",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:13"
+   }
+  ],
+  "rows": [
+   {
+    "identifiers": [
+     "jain.aditi@gmail.com"
+    ],
+    "notes": "Destination: customer_analytics_warehouse, Mode: Continuous, Events/hour: 1,284",
+    "record_type": "DATA_FLOW",
+    "resource_id": "data_flow_1121",
+    "status": "Owner Data Platform",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:42"
+   },
+   {
+    "identifiers": [
+     "lucia-torres@gmail.com",
+     "jain.aditi@gmail.com"
+    ],
+    "notes": "Destination: customer_analytics_warehouse, Mode: Continuous, Events/hour: 842",
+    "record_type": "DATA_FLOW",
+    "resource_id": "data_flow_9846",
+    "status": null,
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07:59:36"
+   },
+   {
+    "identifiers": [],
+    "notes": "4 records",
+    "record_type": "TOPOLOGY_SUMMARY",
+    "resource_id": "data_flow_1121",
+    "status": "Updated moments ago",
+    "system": "Northstar Shop BridgeOps",
+    "timestamp": "07 Aug 2026 08:00 UTC"
+   }
+  ],
+  "uncovered_resource_ids": [],
+  "validation_version": "2"
+ }
+}

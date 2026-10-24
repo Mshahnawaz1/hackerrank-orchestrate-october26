@@ -1,0 +1,83 @@
+{
+ "fingerprint": "f68f68594c3d2f96e89488034a15c902315918601d72befeaa85cdc9795f4d4d",
+ "payload": {
+  "captured_at": "2026-09-05T06:30:00Z",
+  "dropped": [
+   {
+    "reason": "no resource_id or identifier",
+    "row": {
+     "identifiers": [],
+     "notes": "Compliance journal extract for Northstar Shop, classification Internal Restricted, reference CJX-20260905-0630",
+     "record_type": "JOURNAL_ENTRY",
+     "resource_id": null,
+     "status": null,
+     "system": "compliance_journal",
+     "timestamp": "05 Sep 2026 06:30 UTC"
+    }
+   }
+  ],
+  "file_id": "evidence_55",
+  "file_path": "evidence/documents/security_retention_extract.pdf",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "prompt_version": "2",
+  "raw_rows": [
+   {
+    "identifiers": [
+     "user_03"
+    ],
+    "notes": "Account closure recorded by automated account workflow, retain until 25 Aug 2027 04:03 UTC",
+    "record_type": "ACCOUNT_CLOSURE_EVENT",
+    "resource_id": "audit_record_003",
+    "status": "retained",
+    "system": "audit_service",
+    "timestamp": "25 Aug 2026 04:03 UTC"
+   },
+   {
+    "identifiers": [
+     "8f0c31ad"
+    ],
+    "notes": "Journal partition 2026-Q3, record version 1, storage class compliance-ledger, integrity seal valid",
+    "record_type": "JOURNAL_PARTITION",
+    "resource_id": null,
+    "status": "valid",
+    "system": "compliance_journal",
+    "timestamp": null
+   },
+   {
+    "identifiers": [],
+    "notes": "Compliance journal extract for Northstar Shop, classification Internal Restricted, reference CJX-20260905-0630",
+    "record_type": "JOURNAL_ENTRY",
+    "resource_id": null,
+    "status": null,
+    "system": "compliance_journal",
+    "timestamp": "05 Sep 2026 06:30 UTC"
+   }
+  ],
+  "rows": [
+   {
+    "identifiers": [
+     "user_03"
+    ],
+    "notes": "Account closure recorded by automated account workflow, retain until 25 Aug 2027 04:03 UTC",
+    "record_type": "ACCOUNT_CLOSURE_EVENT",
+    "resource_id": "audit_record_003",
+    "status": "retained",
+    "system": "audit_service",
+    "timestamp": "25 Aug 2026 04:03 UTC"
+   },
+   {
+    "identifiers": [
+     "8f0c31ad"
+    ],
+    "notes": "Journal partition 2026-Q3, record version 1, storage class compliance-ledger, integrity seal valid",
+    "record_type": "JOURNAL_PARTITION",
+    "resource_id": null,
+    "status": "valid",
+    "system": "compliance_journal",
+    "timestamp": null
+   }
+  ],
+  "uncovered_resource_ids": [],
+  "validation_version": "2"
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "fingerprint": "dd8a572560f405e4d0452362c932a52b2580e40ff204fe27e7a107add063490e",
+ "payload": {
+  "captured_at": "2026-09-12T07:30:00Z",
+  "dropped": [],
+  "file_id": "evidence_58",
+  "file_path": "evidence/documents/delivery_correction_attachment.pdf",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "prompt_version": "2",
+  "raw_rows": [
+   {
+    "identifiers": [
+     "priya.raman@gmail.com",
+     "+91 98765 73142",
+     "ORD-20264827"
+    ],
+    "notes": "Customer request: change apartment number from 14B to 18B and call before delivery. Product: Stainless steel water bottle, quantity 2. Carrier: SwiftShip.",
+    "record_type": "DELIVERY_ADDRESS_CORRECTION_REQUEST",
+    "resource_id": "support_001",
+    "status": "submitted",
+    "system": "northstar_shop",
+    "timestamp": "18 Jun 2026 10 | 24 UTC"
+   },
+   {
+    "identifiers": [
+     "c90a42"
+    ],
+    "notes": "File: delivery_address_correction.pdf, size: 312 KB, ticket: CS-4827, region: ap-south, uploader: customer.",
+    "record_type": "ATTACHMENT_FILE",
+    "resource_id": null,
+    "status": "captured",
+    "system": "support_service",
+    "timestamp": "12 Sep 2026 07 | 30 UTC"
+   }
+  ],
+  "rows": [
+   {
+    "identifiers": [
+     "priya.raman@gmail.com",
+     "+91 98765 73142",
+     "ORD-20264827"
+    ],
+    "notes": "Customer request: change apartment number from 14B to 18B and call before delivery. Product: Stainless steel water bottle, quantity 2. Carrier: SwiftShip.",
+    "record_type": "DELIVERY_ADDRESS_CORRECTION_REQUEST",
+    "resource_id": "support_001",
+    "status": "submitted",
+    "system": "northstar_shop",
+    "timestamp": "18 Jun 2026 10 | 24 UTC"
+   },
+   {
+    "identifiers": [
+     "c90a42"
+    ],
+    "notes": "File: delivery_address_correction.pdf, size: 312 KB, ticket: CS-4827, region: ap-south, uploader: customer.",
+    "record_type": "ATTACHMENT_FILE",
+    "resource_id": null,
+    "status": "captured",
+    "system": "support_service",
+    "timestamp": "12 Sep 2026 07 | 30 UTC"
+   }
+  ],
+  "uncovered_resource_ids": [],
+  "validation_version": "2"
+ }
+}

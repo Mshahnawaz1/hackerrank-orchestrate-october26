@@ -1,0 +1,7 @@
+{
+ "fingerprint": "a7835d0c86d20f737cf8b2863a2a65b6b02548003af4ffb5a48109cb4f16be81",
+ "payload": {
+  "file_path": "evidence/documents/security_retention_extract.pdf",
+  "text": "COMPLIANCE JOURNAL - SIGNED RECORD EXTRACT\nReference CJX-20260905-0630\nJournal entry\nRecord | Product Northstar Shop Compliance Journal\nDetail | classification Internal Restricted\nDetail | reference CJX-20260905-0630\nissued 05 Sep 2026 06 | 30 UTC\nRecord | Event reference audit_record_003\nDetail | subject reference user_03\nDetail | event Account closure recorded\nDetail | actor automated account workflow\nrecorded 25 Aug 2026 04 | 03 UTC\nretain until 25 Aug 2027 04 | 03 UTC\nRecord | Journal partition 2026-Q3\nDetail | record version 1\nDetail | storage class compliance-ledger\nDetail | integrity seal valid\nDetail | short fingerprint 8f0c31ad\n"
+ }
+}
