@@ -32,6 +32,9 @@ OPERATIONS = {
     "VERIFY_RESTORE_BLOCKED": ("VERIFICATION", "BLOCKED"),
 }
 
+# canonical operation order: the table order of the problem statement
+OP_RANK = {op: i for i, op in enumerate(OPERATIONS)}
+
 STEP_FIELDS = ("step_no", "phase", "system_id", "resource_id", "operation", "state", "evidence_id")
 OUTPUT_COLUMNS = ("case_id", "deletion_status", "steps_json")
 

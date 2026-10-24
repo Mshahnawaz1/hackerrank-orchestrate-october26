@@ -4,10 +4,16 @@ import json
 from . import config
 
 
+def sort_steps(steps: list[dict]) -> list[dict]:
+    """Canonical order: phase, operation (table order), system_id, resource_id."""
+    return sorted(steps, key=lambda s: (config.PHASE_RANK[s["phase"]], config.OP_RANK[s["operation"]],
+                                        s["system_id"], s["resource_id"]))
+
+
 def serialize_steps(steps: list[dict]) -> str:
-    """Renumber from 1 and emit compact JSON with a fixed key order."""
+    """Sort canonically, renumber from 1 and emit compact JSON with a fixed key order."""
     out = []
-    for i, s in enumerate(steps, 1):
+    for i, s in enumerate(sort_steps(steps), 1):
         s = dict(s, step_no=i)
         out.append({k: s.get(k, "") for k in config.STEP_FIELDS})
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
@@ -27,6 +33,7 @@ def validate_row(case_id: str, status: str, steps_json: str) -> list[str]:
     if status == "NOT_APPLICABLE" and steps:
         errs.append(f"{case_id}: NOT_APPLICABLE must have []")
     last_rank = 0
+    seen = set()
     for i, s in enumerate(steps, 1):
         if set(s) != set(config.STEP_FIELDS):
             errs.append(f"{case_id}: step {i} has wrong fields")
@@ -36,6 +43,10 @@ def validate_row(case_id: str, status: str, steps_json: str) -> list[str]:
         op = config.OPERATIONS.get(s["operation"])
         if not op or op != (s["phase"], s["state"]):
             errs.append(f"{case_id}: step {i} bad operation/phase/state")
+        key = tuple(s[k] for k in config.STEP_FIELDS[1:])
+        if key in seen:
+            errs.append(f"{case_id}: step {i} duplicates an earlier step")
+        seen.add(key)
         rank = config.PHASE_RANK.get(s["phase"], -1)
         if rank < last_rank:
             errs.append(f"{case_id}: step {i} phase out of order")

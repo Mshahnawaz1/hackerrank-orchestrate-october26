@@ -10,8 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from agent import config, io  # noqa: E402
-import main as pipeline  # noqa: E402
+from agent import config, io, pipeline  # noqa: E402
 
 KEY = ("phase", "system_id", "resource_id", "operation", "state", "evidence_id")
 

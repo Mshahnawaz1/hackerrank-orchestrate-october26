@@ -262,3 +262,43 @@ branch=main
 repo_root=/home/frontier/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T20:35:16Z] Test intent agent over the dataset
+
+User Prompt (verbatim, secrets redacted):
+test the intent agent over the deletion request dataset
+
+Agent Response Summary:
+Ran the classifier over all 518 requests: 508 deletion, 10 non-deletion, all HIGH confidence, none needing the LLM. Cross-checked against the 10 CLASSIFY_REQUEST activity rows (non-deletion claims), resolving their resources to emails through ingested evidence: the predicted non-deletion set matched exactly. Added DatasetTests to code/tests/test_intent.py.
+
+Actions:
+* Edited code/tests/test_intent.py; ran unit tests
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T20:47:45Z] Clean up implemented milestones against PRD
+
+User Prompt (verbatim, secrets redacted):
+clean the current project files, use @PRD.md as a guide. And implement the plan in @prd.md. Don't try to complete all the milestones. Just clean up the onces already implemented.
+
+Agent Response Summary:
+Aligned the implemented milestones (skeleton, ingestion, intent) with PRD sections 7.4/7.5/8. Moved the per-case pipeline out of main.py into agent/pipeline.py (main.py is now a thin CLI; evaluation no longer imports main), added OP_RANK and canonical step sorting plus a duplicate-step check to serialize.py, and stopped --sample from writing into code/cache. Added tests/test_serialize.py, including a check that all gold sample step arrays are already in canonical order. 14 tests pass; full run still writes 518 valid rows. Left the user's scratch file code/tests/intent_test.py untouched.
+
+Actions:
+* Created code/agent/pipeline.py, code/tests/test_serialize.py
+* Edited code/main.py, code/agent/config.py, code/agent/serialize.py, code/evaluation/main.py
+* Ran unit tests, full run, sample run, single case, eval, ingest report
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

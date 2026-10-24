@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from agent import ingest, io  # noqa: E402
 from agent.intent import HIGH, LOW, MEDIUM, classify  # noqa: E402
 
 
@@ -42,6 +43,26 @@ class IntentTests(unittest.TestCase):
         self.check("Hello, I have a question.", None, LOW)
         self.check("", None, LOW)
         self.assertTrue(classify("").needs_llm)
+
+
+class DatasetTests(unittest.TestCase):
+    """Run over deletion_requests.csv, cross-checked against privacy-intake CLASSIFY_REQUEST claims."""
+
+    def test_all_requests_decided_with_high_confidence(self):
+        results = [classify(r["request_text"]) for r in io.load_requests()]
+        self.assertTrue(all(r.confidence == HIGH and not r.needs_llm for r in results))
+
+    def test_sample_requests_are_all_deletion(self):
+        self.assertTrue(all(classify(r["request_text"]).authorizes_deletion
+                            for r in io.load_requests(sample=True)))
+
+    def test_non_deletion_set_matches_intake_classification(self):
+        store, _ = ingest.ingest_all()
+        flagged = {r["resource_id"] for r in io.load_activity() if r["event_type"] == "CLASSIFY_REQUEST"}
+        expected = {i for rid in flagged for o in store.by_resource(rid) for i in o.identifiers if "@" in i}
+        requests = io.load_requests()
+        predicted = {r["email"].lower() for r in requests if classify(r["request_text"]).authorizes_deletion is False}
+        self.assertEqual(predicted, {r["email"].lower() for r in requests if r["email"].lower() in expected})
 
 
 if __name__ == "__main__":
