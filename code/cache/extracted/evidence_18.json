@@ -1,24 +1,11 @@
 {
- "fingerprint": "f310224404b3d70da28fe7793bc782cfd5e185f9d9db83f0002fcd32b1e79419",
+ "fingerprint": "edf3257d4e3140705b61fde321a7541061df3782e22434fc98b2a307ae84f41b",
  "payload": {
   "captured_at": "2026-07-18T11:00:00Z",
-  "dropped": [
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Payment Visa ending 4821, billing status paid, delivered 14 Jul 2026",
-     "record_type": "PAYMENT_RECORD",
-     "resource_id": null,
-     "status": "paid",
-     "system": "northstar_shop",
-     "timestamp": "14 Jul 2026"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_18",
   "file_path": "evidence/documents/account_history_report_20260718.pdf",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
@@ -26,21 +13,12 @@
      "user_18",
      "ingrid.dahl@outlook.com"
     ],
-    "notes": "Order ORD-20261260 for Smart desk lamp, total EUR 71.93",
+    "notes": "Customer statement for order ORD-20261260, total EUR 71.93; no resource id",
     "record_type": "CUSTOMER_STATEMENT",
     "resource_id": null,
     "status": null,
     "system": "northstar_shop",
-    "timestamp": "08 Jul 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Payment Visa ending 4821, billing status paid, delivered 14 Jul 2026",
-    "record_type": "PAYMENT_RECORD",
-    "resource_id": null,
-    "status": "paid",
-    "system": "northstar_shop",
-    "timestamp": "14 Jul 2026"
+    "timestamp": "2026-07-18"
    }
   ],
   "rows": [
@@ -49,12 +27,12 @@
      "user_18",
      "ingrid.dahl@outlook.com"
     ],
-    "notes": "Order ORD-20261260 for Smart desk lamp, total EUR 71.93",
+    "notes": "Customer statement for order ORD-20261260, total EUR 71.93; no resource id",
     "record_type": "CUSTOMER_STATEMENT",
     "resource_id": null,
     "status": null,
     "system": "northstar_shop",
-    "timestamp": "08 Jul 2026"
+    "timestamp": "2026-07-18"
    }
   ],
   "uncovered_resource_ids": [],

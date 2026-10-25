@@ -1,208 +1,38 @@
 {
- "fingerprint": "caf08b3b9fd9efae0113ffc50a2da411908a29350919b9a32de160be93e03728",
+ "fingerprint": "88203990fd7840443f8f0545c86e2893b5b7d73f74194f98e52ef83e2caf1947",
  "payload": {
   "captured_at": "2026-07-13T10:00:00Z",
-  "dropped": [
-   {
-    "reason": "bad email",
-    "row": {
-     "identifiers": [
-      "user_20",
-      "analytics_7438",
-      "darwish.omar@icl .com",
-      "darwish.omar@icloud.cor"
-     ],
-     "notes": "User profile for Omar Darwish: 12 sessions, 2 orders, 19 products viewed, revenue USD 167.42",
-     "record_type": "USER_PROFILE",
-     "resource_id": "analytics_7438",
-     "status": "ACTIVE",
-     "system": "Pulse Analytics",
-     "timestamp": "13 Jul 2026 14:22 UTC"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_19",
   "file_path": "evidence/images/analytics_profile_view_20260713.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
-    "identifiers": [],
-    "notes": "Order completed: Ceramic coffee set, USD 84.21, Mobile, Audience: Returning shopper",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:22"
-   },
-   {
-    "identifiers": [],
-    "notes": "Checkout started: 2 items, USD 84.21, Mobile, Interest: Coffee & dining",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:20"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product viewed: Ceramic coffee set, Mobile",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:17"
-   },
-   {
-    "identifiers": [],
-    "notes": "Added to cart: Ceramic coffee set, USD 42.00, Mobile",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:16"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product viewed: Stoneware mug, USD 18.00, Desktop",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:12"
-   },
-   {
-    "identifiers": [],
-    "notes": "6 events in active session",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "13 Jul"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order completed - USD 83.21",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "08 Jul"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product search - coffee set",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "30Jun"
-   },
-   {
-    "identifiers": [],
-    "notes": "Campaign opened",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "22Jun"
-   },
-   {
     "identifiers": [
      "user_20",
-     "analytics_7438",
-     "darwish.omar@icl .com",
-     "darwish.omar@icloud.cor"
+     "darwish.omar@icloud.com"
     ],
-    "notes": "User profile for Omar Darwish: 12 sessions, 2 orders, 19 products viewed, revenue USD 167.42",
-    "record_type": "USER_PROFILE",
+    "notes": "Omar Darwish; 12 sessions, 2 completed orders, last activity 13 Jul 2026 14:22 UTC; header email OCR-truncated ('darwish.omar@icl...com')",
+    "record_type": "ANALYTICS_PROFILE",
     "resource_id": "analytics_7438",
-    "status": "ACTIVE",
-    "system": "Pulse Analytics",
-    "timestamp": "13 Jul 2026 14:22 UTC"
+    "status": null,
+    "system": "analytics_service",
+    "timestamp": "2026-07-13T14:22:00Z"
    }
   ],
   "rows": [
    {
-    "identifiers": [],
-    "notes": "Order completed: Ceramic coffee set, USD 84.21, Mobile, Audience: Returning shopper",
-    "record_type": "ANALYTICS_EVENT",
+    "identifiers": [
+     "user_20",
+     "darwish.omar@icloud.com"
+    ],
+    "notes": "Omar Darwish; 12 sessions, 2 completed orders, last activity 13 Jul 2026 14:22 UTC; header email OCR-truncated ('darwish.omar@icl...com')",
+    "record_type": "ANALYTICS_PROFILE",
     "resource_id": "analytics_7438",
     "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:22"
-   },
-   {
-    "identifiers": [],
-    "notes": "Checkout started: 2 items, USD 84.21, Mobile, Interest: Coffee & dining",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:20"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product viewed: Ceramic coffee set, Mobile",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:17"
-   },
-   {
-    "identifiers": [],
-    "notes": "Added to cart: Ceramic coffee set, USD 42.00, Mobile",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:16"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product viewed: Stoneware mug, USD 18.00, Desktop",
-    "record_type": "ANALYTICS_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "14:12"
-   },
-   {
-    "identifiers": [],
-    "notes": "6 events in active session",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "13 Jul"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order completed - USD 83.21",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "08 Jul"
-   },
-   {
-    "identifiers": [],
-    "notes": "Product search - coffee set",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "30Jun"
-   },
-   {
-    "identifiers": [],
-    "notes": "Campaign opened",
-    "record_type": "ACTIVITY_EVENT",
-    "resource_id": "analytics_7438",
-    "status": null,
-    "system": "Pulse Analytics",
-    "timestamp": "22Jun"
+    "system": "analytics_service",
+    "timestamp": "2026-07-13T14:22:00Z"
    }
   ],
   "uncovered_resource_ids": [],

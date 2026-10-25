@@ -552,3 +552,63 @@ branch=main
 repo_root=/home/frontier/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-25T00:18:46Z] Command to run evaluator on sample data
+
+User Prompt (verbatim, secrets redacted):
+give me command to run the evaluator on the sample data
+
+Agent Response Summary:
+Gave the evaluation command from the README; no files changed.
+
+Actions:
+* appended this log entry
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T00:26:58Z] Re-extract evidence with Sonnet
+
+User Prompt (verbatim, secrets redacted):
+then the OCR and try generating the evidence with better llm model. Use sonnet if could.
+
+Agent Response Summary:
+Probed OpenRouter: Sonnet ids answer tiny requests, but full extraction calls fail with HTTP 402 (insufficient credits). Cached extraction and output.csv left unchanged.
+
+Actions:
+* MODEL=anthropic/claude-sonnet-5.5 python3 code/main.py --extract (all 15 files failed 402)
+* appended probe lines to code/cache/usage.jsonl
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T00:30:14Z] Hand-write extraction rows from cached OCR
+
+User Prompt (verbatim, secrets redacted):
+yes write the extraction rows youself with cached OCR text.
+
+Agent Response Summary:
+Read the 15 cached OCR texts and wrote the extraction rows by hand into code/cache/extracted/ (validated by the existing row validator), rebuilt the observation cache and regenerated output.csv. Sample metrics unchanged; two full-run rows changed (case_34 gains support_9538, case_39 loses data_flow_9846 because its selector is a different person). README notes the provenance.
+
+Actions:
+* scratchpad script wrote code/cache/extracted/*.json
+* python3 code/main.py --rebuild-cache; python3 code/main.py; pytest (40 passed)
+* edited README.md
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

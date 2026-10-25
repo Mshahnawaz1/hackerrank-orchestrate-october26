@@ -1,203 +1,62 @@
 {
- "fingerprint": "a286b3980fd07087f4b3aa1b75fb33b6baa08e09d12437d62b5c8372246dd052",
+ "fingerprint": "13937e5773e0d8d7f3a22380a6fbaa3f154a7ecd46d186f78574ba236c1b1c85",
  "payload": {
   "captured_at": "2026-09-26T11:00:00Z",
-  "dropped": [
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Order ORD-20265762: Ceramic coffee set, qty 1, JPY 8,900, delivered 18 Sep 2026",
-     "record_type": "ORDER",
-     "resource_id": null,
-     "status": "Delivered",
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "12 Sep 2026"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Order ORD-20265518: Travel backpack, qty 1, JPY 12,400, returned 03 Sep 2026",
-     "record_type": "ORDER",
-     "resource_id": null,
-     "status": "Returned",
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "28 Aug 2026"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Customer replied to CS-8538",
-     "record_type": "ACTIVITY_LOG",
-     "resource_id": null,
-     "status": null,
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "24 Sep 2026"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Support agent responded",
-     "record_type": "ACTIVITY_LOG",
-     "resource_id": null,
-     "status": null,
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "22 Sep 2026"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Order ORD-20265762 delivered",
-     "record_type": "ACTIVITY_LOG",
-     "resource_id": null,
-     "status": null,
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "18 Sep 2026"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Order ORD-20265518 returned",
-     "record_type": "ACTIVITY_LOG",
-     "resource_id": null,
-     "status": null,
-     "system": "Northstar Shop Customer Operations",
-     "timestamp": "03 Sep 2026"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_04",
   "file_path": "evidence/images/account_admin_console_20260926.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
+     "user_11",
      "haruka.s1838@zoho.com",
-     "+81 90 7610 2507",
-     "user_11"
+     "+81 90 7610 2507"
     ],
-    "notes": "Customer Haruka Sato, loyalty tier Silver, signup channel mobile_app, market JP, preferred language Japanese, last contact 24 Sep 2026 09:14 JST, default address 2-18-4 Kichijoji, Musashino, Tokyo 180-0004",
+    "notes": "Customer Haruka Sato, Silver tier, market JP, last contact 24 Sep 2026 09:14 JST",
     "record_type": "CUSTOMER_PROFILE",
     "resource_id": "account_5762",
-    "status": "Silver",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "12 Jan 2024"
+    "status": null,
+    "system": "account_service",
+    "timestamp": "2026-09-24T09:14:00+09:00"
    },
    {
-    "identifiers": [],
-    "notes": "Support ticket CS-8538 (support_9538) created 28 Aug 2026, related to order ORD-20265518 return",
+    "identifiers": [
+     "haruka.s1838@zoho.com"
+    ],
+    "notes": "Ticket CS-8538 shown on the customer record; created 28 Aug, customer replied 24 Sep",
     "record_type": "SUPPORT_TICKET",
     "resource_id": "support_9538",
-    "status": "CREATED",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "28 Aug 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "support_9538 created",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_9538",
     "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "28 Aug 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order ORD-20265762: Ceramic coffee set, qty 1, JPY 8,900, delivered 18 Sep 2026",
-    "record_type": "ORDER",
-    "resource_id": null,
-    "status": "Delivered",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "12 Sep 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order ORD-20265518: Travel backpack, qty 1, JPY 12,400, returned 03 Sep 2026",
-    "record_type": "ORDER",
-    "resource_id": null,
-    "status": "Returned",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "28 Aug 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Customer replied to CS-8538",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": null,
-    "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "24 Sep 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Support agent responded",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": null,
-    "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "22 Sep 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order ORD-20265762 delivered",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": null,
-    "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "18 Sep 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order ORD-20265518 returned",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": null,
-    "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "03 Sep 2026"
+    "system": "support_service",
+    "timestamp": "2026-08-28"
    }
   ],
   "rows": [
    {
     "identifiers": [
+     "user_11",
      "haruka.s1838@zoho.com",
-     "+81 90 7610 2507",
-     "user_11"
+     "+81 90 7610 2507"
     ],
-    "notes": "Customer Haruka Sato, loyalty tier Silver, signup channel mobile_app, market JP, preferred language Japanese, last contact 24 Sep 2026 09:14 JST, default address 2-18-4 Kichijoji, Musashino, Tokyo 180-0004",
+    "notes": "Customer Haruka Sato, Silver tier, market JP, last contact 24 Sep 2026 09:14 JST",
     "record_type": "CUSTOMER_PROFILE",
     "resource_id": "account_5762",
-    "status": "Silver",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "12 Jan 2024"
+    "status": null,
+    "system": "account_service",
+    "timestamp": "2026-09-24T09:14:00+09:00"
    },
    {
-    "identifiers": [],
-    "notes": "Support ticket CS-8538 (support_9538) created 28 Aug 2026, related to order ORD-20265518 return",
+    "identifiers": [
+     "haruka.s1838@zoho.com"
+    ],
+    "notes": "Ticket CS-8538 shown on the customer record; created 28 Aug, customer replied 24 Sep",
     "record_type": "SUPPORT_TICKET",
     "resource_id": "support_9538",
-    "status": "CREATED",
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "28 Aug 2026"
-   },
-   {
-    "identifiers": [],
-    "notes": "support_9538 created",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_9538",
     "status": null,
-    "system": "Northstar Shop Customer Operations",
-    "timestamp": "28 Aug 2026"
+    "system": "support_service",
+    "timestamp": "2026-08-28"
    }
   ],
   "uncovered_resource_ids": [],

@@ -26,3 +26,5 @@
 {"agent": "multimodal_format", "input_tokens": 835, "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "output_tokens": 3407}
 {"agent": "multimodal_format", "input_tokens": 796, "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "output_tokens": 3886}
 {"agent": "multimodal_format", "input_tokens": 808, "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "output_tokens": 3210}
+{"agent": "probe", "input_tokens": 28, "model": "anthropic/claude-sonnet-5.5", "output_tokens": 11}
+{"agent": "probe", "input_tokens": 18, "model": "anthropic/claude-sonnet-4.5", "output_tokens": 13}

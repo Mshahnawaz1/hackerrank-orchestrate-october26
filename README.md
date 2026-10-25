@@ -89,6 +89,10 @@ single request.
 
 Validation rule changes re-check the saved model reply and do not call the model again.
 
+The committed `code/cache/extracted/` rows were written by Claude Sonnet 5.5 directly from the cached OCR text
+(recorded as model `claude-sonnet-5-5 (manual, from cached OCR text)`), not by an API call; running
+`--extract` with a configured `MODEL` regenerates them with that model instead.
+
 ## Layout
 
 ```

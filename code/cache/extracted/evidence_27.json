@@ -1,78 +1,78 @@
 {
- "fingerprint": "cec59a989bd04e0a0e5de843ee80e80a429a6fb1a88f31fdf531525d5065a577",
+ "fingerprint": "d2df73314450bec3c2e51590693335d5c8fca48621c134a610e2fb2bc4e8ac24",
  "payload": {
   "captured_at": "2026-05-29T08:00:00Z",
   "dropped": [],
   "file_id": "evidence_27",
   "file_path": "evidence/documents/legal_retention_register_20260529.pdf",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "user_08"
     ],
-    "notes": "Amount: USD 184.20; Retain until: 04 May 2033; Reference: AR",
-    "record_type": "Card dispute",
+    "notes": "ORD-20264118 card dispute USD 184.20, retain until 04 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "04 May 2026"
+    "timestamp": "2026-05-04"
    },
    {
     "identifiers": [
      "user_12"
     ],
-    "notes": "Amount: EUR 72.40; Retain until: 09 May 2033; Reference: ML",
-    "record_type": "Tax correction",
+    "notes": "ORD-20264207 tax correction EUR 72.40, retain until 09 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "09 May 2026"
+    "timestamp": "2026-05-09"
    },
    {
     "identifiers": [
      "user_17"
     ],
-    "notes": "Amount: GBP 219.00; Retain until: 14 May 2033; Reference: SK",
-    "record_type": "Chargeback",
+    "notes": "ORD-20264319 chargeback GBP 219.00, retain until 14 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "14 May 2026"
+    "timestamp": "2026-05-14"
    },
    {
     "identifiers": [
      "user_21"
     ],
-    "notes": "Amount: CAD 96.55; Retain until: 18 May 2033; Reference: AR",
-    "record_type": "Invoice inquiry",
+    "notes": "ORD-20264402 invoice inquiry CAD 96.55, retain until 18 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "18 May 2026"
+    "timestamp": "2026-05-18"
    },
    {
     "identifiers": [
      "user_24"
     ],
-    "notes": "Amount: AUD 311.80; Retain until: 23 May 2033; Reference: ML",
-    "record_type": "Card dispute",
+    "notes": "ORD-20264511 card dispute AUD 311.80, retain until 23 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "23 May 2026"
+    "timestamp": "2026-05-23"
    },
    {
     "identifiers": [
      "user_29"
     ],
-    "notes": "Amount: USD 48.75; Retain until: 28 May 2033; Reference: SK",
-    "record_type": "Tax record",
+    "notes": "ORD-20264600 tax record USD 48.75, retain until 28 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "28 May 2026"
+    "timestamp": "2026-05-28"
    }
   ],
   "rows": [
@@ -80,67 +80,67 @@
     "identifiers": [
      "user_08"
     ],
-    "notes": "Amount: USD 184.20; Retain until: 04 May 2033; Reference: AR",
-    "record_type": "Card dispute",
+    "notes": "ORD-20264118 card dispute USD 184.20, retain until 04 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "04 May 2026"
+    "timestamp": "2026-05-04"
    },
    {
     "identifiers": [
      "user_12"
     ],
-    "notes": "Amount: EUR 72.40; Retain until: 09 May 2033; Reference: ML",
-    "record_type": "Tax correction",
+    "notes": "ORD-20264207 tax correction EUR 72.40, retain until 09 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "09 May 2026"
+    "timestamp": "2026-05-09"
    },
    {
     "identifiers": [
      "user_17"
     ],
-    "notes": "Amount: GBP 219.00; Retain until: 14 May 2033; Reference: SK",
-    "record_type": "Chargeback",
+    "notes": "ORD-20264319 chargeback GBP 219.00, retain until 14 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "14 May 2026"
+    "timestamp": "2026-05-14"
    },
    {
     "identifiers": [
      "user_21"
     ],
-    "notes": "Amount: CAD 96.55; Retain until: 18 May 2033; Reference: AR",
-    "record_type": "Invoice inquiry",
+    "notes": "ORD-20264402 invoice inquiry CAD 96.55, retain until 18 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "18 May 2026"
+    "timestamp": "2026-05-18"
    },
    {
     "identifiers": [
      "user_24"
     ],
-    "notes": "Amount: AUD 311.80; Retain until: 23 May 2033; Reference: ML",
-    "record_type": "Card dispute",
+    "notes": "ORD-20264511 card dispute AUD 311.80, retain until 23 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "23 May 2026"
+    "timestamp": "2026-05-23"
    },
    {
     "identifiers": [
      "user_29"
     ],
-    "notes": "Amount: USD 48.75; Retain until: 28 May 2033; Reference: SK",
-    "record_type": "Tax record",
+    "notes": "ORD-20264600 tax record USD 48.75, retain until 28 May 2033",
+    "record_type": "DISPUTED_ORDER",
     "resource_id": null,
     "status": "retained",
     "system": "finance_operations",
-    "timestamp": "28 May 2026"
+    "timestamp": "2026-05-28"
    }
   ],
   "uncovered_resource_ids": [],

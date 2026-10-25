@@ -1,108 +1,23 @@
 {
- "fingerprint": "fc62e88a728db283b0447740db6c3379d2bc050c748ed6e47c934488c25e3b2f",
+ "fingerprint": "26835829a2f2015224476577f6da068ef04592f8d87966ec9cca44745e5dd7fc",
  "payload": {
   "captured_at": "2026-05-24T07:00:00Z",
   "dropped": [],
   "file_id": "evidence_28",
   "file_path": "evidence/images/support_ticket_console_20260524.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "kagyeman8947@fastmail.com"
     ],
-    "notes": "Ticket CS-5034 for order ORD-20265034, customer Kofi Agyeman, assigned to Maya Chen.",
+    "notes": "Ticket CS-5034 'Where is my delivery?', customer Kofi Agyeman, order ORD-20265034, assigned to Maya Chen; 4 conversation messages",
     "record_type": "SUPPORT_TICKET",
     "resource_id": "support_1034",
-    "status": "Normal priority",
-    "system": "helpline_console",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "kagyeman8947@fastmail.com"
-    ],
-    "notes": "Customer inquiry about order delivery.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
     "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:12"
-   },
-   {
-    "identifiers": [],
-    "notes": "Automated bot response.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:13"
-   },
-   {
-    "identifiers": [],
-    "notes": "Agent update with expected delivery date.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:28"
-   },
-   {
-    "identifiers": [
-     "kagyeman8947@fastmail.com"
-    ],
-    "notes": "Customer acknowledgment.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:35"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order confirmed.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Order confirmed",
-    "system": "helpline_console",
-    "timestamp": "22May"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order dispatched.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Dispatched",
-    "system": "helpline_console",
-    "timestamp": "23May"
-   },
-   {
-    "identifiers": [],
-    "notes": "Parcel reached regional hub.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Reached regional hub",
-    "system": "helpline_console",
-    "timestamp": "24 May 07:46"
-   },
-   {
-    "identifiers": [],
-    "notes": "Parcel in transit.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "In transit",
-    "system": "helpline_console",
-    "timestamp": "24 May 08:15"
-   },
-   {
-    "identifiers": [],
-    "notes": "Expected delivery date.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Delivery expected",
-    "system": "helpline_console",
-    "timestamp": "26 May"
+    "system": "support_service",
+    "timestamp": "2026-05-24"
    }
   ],
   "rows": [
@@ -110,97 +25,12 @@
     "identifiers": [
      "kagyeman8947@fastmail.com"
     ],
-    "notes": "Ticket CS-5034 for order ORD-20265034, customer Kofi Agyeman, assigned to Maya Chen.",
+    "notes": "Ticket CS-5034 'Where is my delivery?', customer Kofi Agyeman, order ORD-20265034, assigned to Maya Chen; 4 conversation messages",
     "record_type": "SUPPORT_TICKET",
     "resource_id": "support_1034",
-    "status": "Normal priority",
-    "system": "helpline_console",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "kagyeman8947@fastmail.com"
-    ],
-    "notes": "Customer inquiry about order delivery.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
     "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:12"
-   },
-   {
-    "identifiers": [],
-    "notes": "Automated bot response.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:13"
-   },
-   {
-    "identifiers": [],
-    "notes": "Agent update with expected delivery date.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:28"
-   },
-   {
-    "identifiers": [
-     "kagyeman8947@fastmail.com"
-    ],
-    "notes": "Customer acknowledgment.",
-    "record_type": "SUPPORT_MESSAGE",
-    "resource_id": "support_1034",
-    "status": null,
-    "system": "helpline_console",
-    "timestamp": "09:35"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order confirmed.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Order confirmed",
-    "system": "helpline_console",
-    "timestamp": "22May"
-   },
-   {
-    "identifiers": [],
-    "notes": "Order dispatched.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Dispatched",
-    "system": "helpline_console",
-    "timestamp": "23May"
-   },
-   {
-    "identifiers": [],
-    "notes": "Parcel reached regional hub.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Reached regional hub",
-    "system": "helpline_console",
-    "timestamp": "24 May 07:46"
-   },
-   {
-    "identifiers": [],
-    "notes": "Parcel in transit.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "In transit",
-    "system": "helpline_console",
-    "timestamp": "24 May 08:15"
-   },
-   {
-    "identifiers": [],
-    "notes": "Expected delivery date.",
-    "record_type": "ACTIVITY_LOG",
-    "resource_id": "support_1034",
-    "status": "Delivery expected",
-    "system": "helpline_console",
-    "timestamp": "26 May"
+    "system": "support_service",
+    "timestamp": "2026-05-24"
    }
   ],
   "uncovered_resource_ids": [],

@@ -1,96 +1,65 @@
 {
- "fingerprint": "7c9eb4b430aee057cf66f2c2ba00c5aa474316b061e8ddd427499c93c7c7813a",
+ "fingerprint": "8a148767ca3bff2069fb828721f8ee1d2c079b9718ce98d234ce9c6648b8686d",
  "payload": {
   "captured_at": "2026-04-29T09:00:00Z",
-  "dropped": [
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Checksum verification completed",
-     "record_type": "CHECKSUM_VERIFICATION",
-     "resource_id": null,
-     "status": "Completed",
-     "system": "Vault Recovery Manager",
-     "timestamp": "22Apr"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_32",
   "file_path": "evidence/images/backup_restore_console_20260429.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "bluepeakco@outlook.com"
     ],
-    "notes": "Size: 102.3 GB, Encryption: AES-256, Tier: Archive Path $3://northstar-backups/customer-platform/weekly/segment-42-, Region: ap-southeast-1",
+    "notes": "ap-southeast-1, 102.3 GB, tier Archive",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9291",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "miller.logistics@company.com"
     ],
-    "notes": "Size: 67.1GB, Encryption: AES-256, Tier: Archive 20260426.tar.zst Region eu-west-1, Region: us-west-2",
+    "notes": "us-west-2, 67.1 GB, tier Archive",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9288",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "areed1433@gmail.com"
     ],
-    "notes": "Size: 84.7 GB, Encryption: AES-256, Tier: Archive Created 26 Apr 2026 02:00 UTC, Region: eu-west-1",
+    "notes": "eu-west-1, 84.7 GB, tier Archive, path s3://northstar-backups/customer-platform/weekly/segment-42-20260426.tar.zst, retention end 26 Jul 2026",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9287",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "summit-retail@company.com"
     ],
-    "notes": "Size: 91.4 GB, Encryption: AES-256, Tier: Archive Encryption AES-256 Checksum Verified Last drill 29 Mar 2026 Retention end 26 Jul 2026, Region: us-east-1",
+    "notes": "us-east-1, 91.4 GB, tier Archive; restored 25 Apr (completed)",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9286",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [],
-    "notes": "Restore completed",
-    "record_type": "RESTORE_ACTIVITY",
-    "resource_id": "backup_9286",
-    "status": "Completed",
-    "system": "Vault Recovery Manager",
-    "timestamp": "25Apr"
-   },
-   {
-    "identifiers": [],
-    "notes": "Restore completed",
-    "record_type": "RESTORE_ACTIVITY",
+    "notes": "Activity feed: backup_9281 restored, completed",
+    "record_type": "BACKUP_RESTORE",
     "resource_id": "backup_9281",
     "status": "Completed",
-    "system": "Vault Recovery Manager",
-    "timestamp": "24Apr"
-   },
-   {
-    "identifiers": [],
-    "notes": "Checksum verification completed",
-    "record_type": "CHECKSUM_VERIFICATION",
-    "resource_id": null,
-    "status": "Completed",
-    "system": "Vault Recovery Manager",
-    "timestamp": "22Apr"
+    "system": "backup_service",
+    "timestamp": "2026-04-24"
    }
   ],
   "rows": [
@@ -98,63 +67,54 @@
     "identifiers": [
      "bluepeakco@outlook.com"
     ],
-    "notes": "Size: 102.3 GB, Encryption: AES-256, Tier: Archive Path $3://northstar-backups/customer-platform/weekly/segment-42-, Region: ap-southeast-1",
+    "notes": "ap-southeast-1, 102.3 GB, tier Archive",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9291",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "miller.logistics@company.com"
     ],
-    "notes": "Size: 67.1GB, Encryption: AES-256, Tier: Archive 20260426.tar.zst Region eu-west-1, Region: us-west-2",
+    "notes": "us-west-2, 67.1 GB, tier Archive",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9288",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "areed1433@gmail.com"
     ],
-    "notes": "Size: 84.7 GB, Encryption: AES-256, Tier: Archive Created 26 Apr 2026 02:00 UTC, Region: eu-west-1",
+    "notes": "eu-west-1, 84.7 GB, tier Archive, path s3://northstar-backups/customer-platform/weekly/segment-42-20260426.tar.zst, retention end 26 Jul 2026",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9287",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [
      "summit-retail@company.com"
     ],
-    "notes": "Size: 91.4 GB, Encryption: AES-256, Tier: Archive Encryption AES-256 Checksum Verified Last drill 29 Mar 2026 Retention end 26 Jul 2026, Region: us-east-1",
+    "notes": "us-east-1, 91.4 GB, tier Archive; restored 25 Apr (completed)",
     "record_type": "BACKUP_ARCHIVE",
     "resource_id": "backup_9286",
-    "status": "ACTIVE",
-    "system": "Vault Recovery Manager",
-    "timestamp": "26 Apr 02:00"
+    "status": null,
+    "system": "backup_service",
+    "timestamp": "2026-04-26T02:00:00Z"
    },
    {
     "identifiers": [],
-    "notes": "Restore completed",
-    "record_type": "RESTORE_ACTIVITY",
-    "resource_id": "backup_9286",
-    "status": "Completed",
-    "system": "Vault Recovery Manager",
-    "timestamp": "25Apr"
-   },
-   {
-    "identifiers": [],
-    "notes": "Restore completed",
-    "record_type": "RESTORE_ACTIVITY",
+    "notes": "Activity feed: backup_9281 restored, completed",
+    "record_type": "BACKUP_RESTORE",
     "resource_id": "backup_9281",
     "status": "Completed",
-    "system": "Vault Recovery Manager",
-    "timestamp": "24Apr"
+    "system": "backup_service",
+    "timestamp": "2026-04-24"
    }
   ],
   "uncovered_resource_ids": [],

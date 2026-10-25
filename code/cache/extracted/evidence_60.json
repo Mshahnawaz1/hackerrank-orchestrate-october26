@@ -1,222 +1,38 @@
 {
- "fingerprint": "36c200f1a06265d3a6871204801b2cf01c7beb8f60becd4c74a6eb48e9581fd9",
+ "fingerprint": "5c3dab04b8925bb4e30f9f534b0a40c89b8ef61295cdd8307f84cdfc76567299",
  "payload": {
   "captured_at": "2026-09-16T07:20:00Z",
   "dropped": [],
   "file_id": "evidence_60",
   "file_path": "evidence/images/marketing_profile_console.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
+     "+82 10-5837-9451"
     ],
-    "notes": "Market: South Korea, Language: Korean, Email opt-in: Yes, SMS opt-in: No, Last refreshed: 15 Sep 2026 23:40 UTC",
-    "record_type": "USER_PROFILE",
+    "notes": "Soo-jin Park; South Korea, Korean, email opt-in Yes, SMS opt-in No; audience Returning customers - East Asia",
+    "record_type": "MARKETING_PROFILE",
     "resource_id": "marketing_001",
     "status": "Live",
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:40 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Product-category update: Desk accessories - Drinkware; Segments: Repeat customer - Home & lifestyle, Mobile shopper",
-    "record_type": "PROFILE_ACTIVITY",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:40 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Campaign eligibility check: Autumn offers - Eligible; Preferred categories: Desk accessories - Drinkware",
-    "record_type": "CAMPAIGN_ELIGIBILITY_CHECK",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:38 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Profile refresh: Live profile fields updated",
-    "record_type": "PROFILE_REFRESH",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:35 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Audience evaluation: Returning customers — East Asia; Open rate 32.4%, Click rate 6.8%",
-    "record_type": "AUDIENCE_EVALUATION",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:32 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Autumn offers open rate: 32.4%",
-    "record_type": "CAMPAIGN_METRICS",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Home & Lifestyle Picks open rate: 28.7%",
-    "record_type": "CAMPAIGN_METRICS",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Profile refreshed from live data",
-    "record_type": "PROFILE_REFRESH",
-    "resource_id": "marketing_001",
-    "status": "Recorded",
-    "system": "audience_operations",
-    "timestamp": null
+    "system": "marketing_platform",
+    "timestamp": "2026-09-15T23:40:00Z"
    }
   ],
   "rows": [
    {
     "identifiers": [
      "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
+     "+82 10-5837-9451"
     ],
-    "notes": "Market: South Korea, Language: Korean, Email opt-in: Yes, SMS opt-in: No, Last refreshed: 15 Sep 2026 23:40 UTC",
-    "record_type": "USER_PROFILE",
+    "notes": "Soo-jin Park; South Korea, Korean, email opt-in Yes, SMS opt-in No; audience Returning customers - East Asia",
+    "record_type": "MARKETING_PROFILE",
     "resource_id": "marketing_001",
     "status": "Live",
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:40 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Product-category update: Desk accessories - Drinkware; Segments: Repeat customer - Home & lifestyle, Mobile shopper",
-    "record_type": "PROFILE_ACTIVITY",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:40 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Campaign eligibility check: Autumn offers - Eligible; Preferred categories: Desk accessories - Drinkware",
-    "record_type": "CAMPAIGN_ELIGIBILITY_CHECK",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:38 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Profile refresh: Live profile fields updated",
-    "record_type": "PROFILE_REFRESH",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:35 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Audience evaluation: Returning customers — East Asia; Open rate 32.4%, Click rate 6.8%",
-    "record_type": "AUDIENCE_EVALUATION",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": "15 Sep 2026 23:32 UTC"
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Autumn offers open rate: 32.4%",
-    "record_type": "CAMPAIGN_METRICS",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Home & Lifestyle Picks open rate: 28.7%",
-    "record_type": "CAMPAIGN_METRICS",
-    "resource_id": "marketing_001",
-    "status": null,
-    "system": "audience_operations",
-    "timestamp": null
-   },
-   {
-    "identifiers": [
-     "sj.park@naver.com",
-     "+82 10-5837-9451",
-     "marketing_001"
-    ],
-    "notes": "Profile refreshed from live data",
-    "record_type": "PROFILE_REFRESH",
-    "resource_id": "marketing_001",
-    "status": "Recorded",
-    "system": "audience_operations",
-    "timestamp": null
+    "system": "marketing_platform",
+    "timestamp": "2026-09-15T23:40:00Z"
    }
   ],
   "uncovered_resource_ids": [],

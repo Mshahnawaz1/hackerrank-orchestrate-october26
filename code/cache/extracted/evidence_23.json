@@ -1,56 +1,56 @@
 {
- "fingerprint": "f5e8e55e5c906e7090abe927e9d0abc47cf32e2f6dde7a7607d27980ce910a20",
+ "fingerprint": "d861ac4435fa4e9f0d8f6f1fcf9f3fb967a66bdb15c79933984c5704ba699e11",
  "payload": {
   "captured_at": "2026-06-18T12:00:00Z",
   "dropped": [],
   "file_id": "evidence_23",
   "file_path": "evidence/images/customer_export_console_20260618.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "marcus.lee@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1261.zip; Created 148 Jun 2026 06:42 UTC (possible OCR error)",
+    "notes": "customer_export_1261.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1261",
     "status": "Collecting",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "20 Jun 14:18 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-20T14:18:00Z"
    },
    {
     "identifiers": [
      "ingrid.dahl@outlook.com"
     ],
-    "notes": "Filename: customer_export_1260.zip; Size: 18.4 MB; Expires: 25 Jun 2026 06:42 UTC; Included: Profile, Orders, Saved addresses",
+    "notes": "customer_export_1260.zip, 18.4 MB, expires 25 Jun 2026, includes Profile, Orders, Saved addresses",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1260",
     "status": "Ready",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "18 Jun 06:42 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-18T06:42:00Z"
    },
    {
     "identifiers": [
      "sara.kim@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1259.zip; Checksum SHA-256: 41ca09...",
+    "notes": "customer_export_1259.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1259",
     "status": "Packaging",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "17 Jun 11:03 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-17T11:03:00Z"
    },
    {
     "identifiers": [
      "daniel.park@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1258.zip; Download count not shown",
+    "notes": "customer_export_1258.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1258",
     "status": "Ready",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "16 Jun 09:27 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-16T09:27:00Z"
    }
   ],
   "rows": [
@@ -58,45 +58,45 @@
     "identifiers": [
      "marcus.lee@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1261.zip; Created 148 Jun 2026 06:42 UTC (possible OCR error)",
+    "notes": "customer_export_1261.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1261",
     "status": "Collecting",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "20 Jun 14:18 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-20T14:18:00Z"
    },
    {
     "identifiers": [
      "ingrid.dahl@outlook.com"
     ],
-    "notes": "Filename: customer_export_1260.zip; Size: 18.4 MB; Expires: 25 Jun 2026 06:42 UTC; Included: Profile, Orders, Saved addresses",
+    "notes": "customer_export_1260.zip, 18.4 MB, expires 25 Jun 2026, includes Profile, Orders, Saved addresses",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1260",
     "status": "Ready",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "18 Jun 06:42 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-18T06:42:00Z"
    },
    {
     "identifiers": [
      "sara.kim@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1259.zip; Checksum SHA-256: 41ca09...",
+    "notes": "customer_export_1259.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1259",
     "status": "Packaging",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "17 Jun 11:03 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-17T11:03:00Z"
    },
    {
     "identifiers": [
      "daniel.park@northstar.shop"
     ],
-    "notes": "Filename: customer_export_1258.zip; Download count not shown",
+    "notes": "customer_export_1258.zip",
     "record_type": "DATA_EXPORT",
     "resource_id": "export_1258",
     "status": "Ready",
-    "system": "Northstar Shop Customer Download Center",
-    "timestamp": "16 Jun 09:27 UTC"
+    "system": "export_service",
+    "timestamp": "2026-06-16T09:27:00Z"
    }
   ],
   "uncovered_resource_ids": [],

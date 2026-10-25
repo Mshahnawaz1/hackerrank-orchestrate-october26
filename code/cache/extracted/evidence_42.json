@@ -1,108 +1,23 @@
 {
- "fingerprint": "f1266a16d674056da17fefc14728e43d796b1a9114efbe51363f7ab3423ae056",
+ "fingerprint": "15fdca265458d6e0551ed28ff4e5500e843c65767ee3b6fecb6c951e9829669b",
  "payload": {
   "captured_at": "2026-03-10T06:00:00Z",
-  "dropped": [
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Linked to customer, finance link added 22 Aug 2024",
-     "record_type": "ORDER",
-     "resource_id": null,
-     "status": "Active",
-     "system": "Northstar Shop",
-     "timestamp": "11 Jan 2024 08:45 UTC"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Linked to customer, support link added 14 Feb 2024 and 03 Jun 2024",
-     "record_type": "SUPPORT_CASE",
-     "resource_id": null,
-     "status": "Active",
-     "system": "Northstar Shop",
-     "timestamp": "14 Feb 2024 12:16 UTC"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Linked to customer, reference created 11 Jan 2024",
-     "record_type": "SUPPORT_CASE",
-     "resource_id": null,
-     "status": "Active",
-     "system": "Northstar Shop",
-     "timestamp": "03 Jun 2024 09:27 UTC"
-    }
-   },
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Linked to customer, metadata reviewed",
-     "record_type": "FINANCE_RECORD",
-     "resource_id": null,
-     "status": "Active",
-     "system": "Northstar Shop",
-     "timestamp": "22 Aug 2024 15:03 UTC"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_42",
   "file_path": "evidence/images/deleted_account_reference_20260310.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "user_17"
     ],
-    "notes": "Retained reference for user_17 in Account Platform eu-west",
+    "notes": "Retained customer key, Account Platform eu-west, created 11 Jan 2024; linked ORD-20263245, CS-3245, CS-3378, FIN-7742",
     "record_type": "CUSTOMER_REFERENCE",
     "resource_id": null,
     "status": "Retained",
-    "system": "Northstar Shop",
-    "timestamp": "11 Jan 2024 08:42 UTC"
-   },
-   {
-    "identifiers": [],
-    "notes": "Linked to customer, finance link added 22 Aug 2024",
-    "record_type": "ORDER",
-    "resource_id": null,
-    "status": "Active",
-    "system": "Northstar Shop",
-    "timestamp": "11 Jan 2024 08:45 UTC"
-   },
-   {
-    "identifiers": [],
-    "notes": "Linked to customer, support link added 14 Feb 2024 and 03 Jun 2024",
-    "record_type": "SUPPORT_CASE",
-    "resource_id": null,
-    "status": "Active",
-    "system": "Northstar Shop",
-    "timestamp": "14 Feb 2024 12:16 UTC"
-   },
-   {
-    "identifiers": [],
-    "notes": "Linked to customer, reference created 11 Jan 2024",
-    "record_type": "SUPPORT_CASE",
-    "resource_id": null,
-    "status": "Active",
-    "system": "Northstar Shop",
-    "timestamp": "03 Jun 2024 09:27 UTC"
-   },
-   {
-    "identifiers": [],
-    "notes": "Linked to customer, metadata reviewed",
-    "record_type": "FINANCE_RECORD",
-    "resource_id": null,
-    "status": "Active",
-    "system": "Northstar Shop",
-    "timestamp": "22 Aug 2024 15:03 UTC"
+    "system": "account_service",
+    "timestamp": "2026-03-10T07:18:00Z"
    }
   ],
   "rows": [
@@ -110,12 +25,12 @@
     "identifiers": [
      "user_17"
     ],
-    "notes": "Retained reference for user_17 in Account Platform eu-west",
+    "notes": "Retained customer key, Account Platform eu-west, created 11 Jan 2024; linked ORD-20263245, CS-3245, CS-3378, FIN-7742",
     "record_type": "CUSTOMER_REFERENCE",
     "resource_id": null,
     "status": "Retained",
-    "system": "Northstar Shop",
-    "timestamp": "11 Jan 2024 08:42 UTC"
+    "system": "account_service",
+    "timestamp": "2026-03-10T07:18:00Z"
    }
   ],
   "uncovered_resource_ids": [],

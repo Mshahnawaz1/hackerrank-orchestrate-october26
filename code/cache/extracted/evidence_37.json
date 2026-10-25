@@ -1,79 +1,78 @@
 {
- "fingerprint": "0088957d53623170ba5bd69824d68b5402974543831256c2ca561b449ce5966d",
+ "fingerprint": "42d5e46b822b14c05186994b1cbc360b06e33e79793517414f1c3c5a9b494432",
  "payload": {
   "captured_at": "2026-09-05T07:00:00Z",
   "dropped": [],
   "file_id": "evidence_37",
   "file_path": "evidence/images/security_audit_explorer_20260905.png",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Account closure recorded; Actor: Automated workflow; Reference: audit_record_003; Subject: user_03",
-    "record_type": "Account lifecycle",
+    "notes": "Account closure recorded, category Account lifecycle, actor automated workflow, fingerprint 8f0c...31ad, journal 2026-Q3",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_003",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "25 Aug 04:03"
+    "system": "audit_service",
+    "timestamp": "2026-08-25T04:03:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Session revoked; Actor: Security system; Reference: audit_record_002; Actor automated account workflow recorded_at 2026-08-25T04:03:00Z",
-    "record_type": "Session management",
+    "notes": "Session revoked, Session management, actor security system",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_002",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "25 Aug 03:21"
+    "system": "audit_service",
+    "timestamp": "2026-08-25T03:21:00Z"
    },
    {
     "identifiers": [
-     "user_03",
-     "8f0c...31ad"
+     "user_03"
     ],
-    "notes": "Recovery challenge completed; Actor: User (self); Reference: audit_record_001; Fingerprint: 8f0c...31ad",
-    "record_type": "Authentication",
+    "notes": "Recovery challenge completed, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_001",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "24 Aug 16:14"
+    "system": "audit_service",
+    "timestamp": "2026-08-24T16:14:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Email change confirmed; Actor: User (self); Reference: audit_record_006; Signature: Valid",
-    "record_type": "Profile update",
+    "notes": "Email change confirmed, Profile update, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_006",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "22 Aug 11:27"
+    "system": "audit_service",
+    "timestamp": "2026-08-22T11:27:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Login from new device; Actor: User (self); Reference: audit_record_005; Journal: 2026-Q3",
-    "record_type": "Authentication",
+    "notes": "Login from new device, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_005",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "20 Aug 09:42"
+    "system": "audit_service",
+    "timestamp": "2026-08-20T09:42:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Password changed; Actor: User (self); Reference: audit_record_004; Activity",
-    "record_type": "Authentication",
+    "notes": "Password changed, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_004",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "18 Aug 14:05"
+    "system": "audit_service",
+    "timestamp": "2026-08-18T14:05:00Z"
    }
   ],
   "rows": [
@@ -81,68 +80,67 @@
     "identifiers": [
      "user_03"
     ],
-    "notes": "Account closure recorded; Actor: Automated workflow; Reference: audit_record_003; Subject: user_03",
-    "record_type": "Account lifecycle",
+    "notes": "Account closure recorded, category Account lifecycle, actor automated workflow, fingerprint 8f0c...31ad, journal 2026-Q3",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_003",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "25 Aug 04:03"
+    "system": "audit_service",
+    "timestamp": "2026-08-25T04:03:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Session revoked; Actor: Security system; Reference: audit_record_002; Actor automated account workflow recorded_at 2026-08-25T04:03:00Z",
-    "record_type": "Session management",
+    "notes": "Session revoked, Session management, actor security system",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_002",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "25 Aug 03:21"
+    "system": "audit_service",
+    "timestamp": "2026-08-25T03:21:00Z"
    },
    {
     "identifiers": [
-     "user_03",
-     "8f0c...31ad"
+     "user_03"
     ],
-    "notes": "Recovery challenge completed; Actor: User (self); Reference: audit_record_001; Fingerprint: 8f0c...31ad",
-    "record_type": "Authentication",
+    "notes": "Recovery challenge completed, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_001",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "24 Aug 16:14"
+    "system": "audit_service",
+    "timestamp": "2026-08-24T16:14:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Email change confirmed; Actor: User (self); Reference: audit_record_006; Signature: Valid",
-    "record_type": "Profile update",
+    "notes": "Email change confirmed, Profile update, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_006",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "22 Aug 11:27"
+    "system": "audit_service",
+    "timestamp": "2026-08-22T11:27:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Login from new device; Actor: User (self); Reference: audit_record_005; Journal: 2026-Q3",
-    "record_type": "Authentication",
+    "notes": "Login from new device, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_005",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "20 Aug 09:42"
+    "system": "audit_service",
+    "timestamp": "2026-08-20T09:42:00Z"
    },
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Password changed; Actor: User (self); Reference: audit_record_004; Activity",
-    "record_type": "Authentication",
+    "notes": "Password changed, Authentication, actor user (self)",
+    "record_type": "SECURITY_AUDIT_LOG",
     "resource_id": "audit_record_004",
     "status": "Valid",
-    "system": "Northstar Shop Sentinel",
-    "timestamp": "18 Aug 14:05"
+    "system": "audit_service",
+    "timestamp": "2026-08-18T14:05:00Z"
    }
   ],
   "uncovered_resource_ids": [],

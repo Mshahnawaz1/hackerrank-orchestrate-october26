@@ -1,56 +1,23 @@
 {
- "fingerprint": "f68f68594c3d2f96e89488034a15c902315918601d72befeaa85cdc9795f4d4d",
+ "fingerprint": "08dd718115be49a590f49fb79955d117f400c145b42aee89734e162287601a8a",
  "payload": {
   "captured_at": "2026-09-05T06:30:00Z",
-  "dropped": [
-   {
-    "reason": "no resource_id or identifier",
-    "row": {
-     "identifiers": [],
-     "notes": "Compliance journal extract for Northstar Shop, classification Internal Restricted, reference CJX-20260905-0630",
-     "record_type": "JOURNAL_ENTRY",
-     "resource_id": null,
-     "status": null,
-     "system": "compliance_journal",
-     "timestamp": "05 Sep 2026 06:30 UTC"
-    }
-   }
-  ],
+  "dropped": [],
   "file_id": "evidence_55",
   "file_path": "evidence/documents/security_retention_extract.pdf",
-  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "model": "claude-sonnet-5-5 (manual, from cached OCR text)",
   "prompt_version": "2",
   "raw_rows": [
    {
     "identifiers": [
      "user_03"
     ],
-    "notes": "Account closure recorded by automated account workflow, retain until 25 Aug 2027 04:03 UTC",
-    "record_type": "ACCOUNT_CLOSURE_EVENT",
+    "notes": "Account closure recorded by automated account workflow; retain until 25 Aug 2027 04:03 UTC; journal 2026-Q3, storage class compliance-ledger, seal valid, fingerprint 8f0c31ad; extract reference CJX-20260905-0630 issued 05 Sep 2026",
+    "record_type": "COMPLIANCE_JOURNAL_ENTRY",
     "resource_id": "audit_record_003",
     "status": "retained",
     "system": "audit_service",
-    "timestamp": "25 Aug 2026 04:03 UTC"
-   },
-   {
-    "identifiers": [
-     "8f0c31ad"
-    ],
-    "notes": "Journal partition 2026-Q3, record version 1, storage class compliance-ledger, integrity seal valid",
-    "record_type": "JOURNAL_PARTITION",
-    "resource_id": null,
-    "status": "valid",
-    "system": "compliance_journal",
-    "timestamp": null
-   },
-   {
-    "identifiers": [],
-    "notes": "Compliance journal extract for Northstar Shop, classification Internal Restricted, reference CJX-20260905-0630",
-    "record_type": "JOURNAL_ENTRY",
-    "resource_id": null,
-    "status": null,
-    "system": "compliance_journal",
-    "timestamp": "05 Sep 2026 06:30 UTC"
+    "timestamp": "2026-08-25T04:03:00Z"
    }
   ],
   "rows": [
@@ -58,23 +25,12 @@
     "identifiers": [
      "user_03"
     ],
-    "notes": "Account closure recorded by automated account workflow, retain until 25 Aug 2027 04:03 UTC",
-    "record_type": "ACCOUNT_CLOSURE_EVENT",
+    "notes": "Account closure recorded by automated account workflow; retain until 25 Aug 2027 04:03 UTC; journal 2026-Q3, storage class compliance-ledger, seal valid, fingerprint 8f0c31ad; extract reference CJX-20260905-0630 issued 05 Sep 2026",
+    "record_type": "COMPLIANCE_JOURNAL_ENTRY",
     "resource_id": "audit_record_003",
     "status": "retained",
     "system": "audit_service",
-    "timestamp": "25 Aug 2026 04:03 UTC"
-   },
-   {
-    "identifiers": [
-     "8f0c31ad"
-    ],
-    "notes": "Journal partition 2026-Q3, record version 1, storage class compliance-ledger, integrity seal valid",
-    "record_type": "JOURNAL_PARTITION",
-    "resource_id": null,
-    "status": "valid",
-    "system": "compliance_journal",
-    "timestamp": null
+    "timestamp": "2026-08-25T04:03:00Z"
    }
   ],
   "uncovered_resource_ids": [],
