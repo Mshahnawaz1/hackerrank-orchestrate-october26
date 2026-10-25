@@ -29,6 +29,26 @@ class SerializeTests(unittest.TestCase):
             [step("REMEDIATION", "DELETE_RECORD", "a", "b")])))
         self.assertTrue(serialize.validate_row("c", "MAYBE", "[]"))
 
+    def test_new_invariants(self):
+        finding = step("FINDING", "REPORT_REMAINING_RECORD", "search_service", "search_1", "evidence_1")
+        fix = step("REMEDIATION", "DELETE_RECORD", "search_service", "search_1")
+        verify_ev = step("VERIFICATION", "VERIFY_RECORD_ABSENT", "account_service", "account_1", "evidence_1")
+        verify = step("VERIFICATION", "VERIFY_RECORD_ABSENT", "account_service", "account_1")
+
+        def errors(status, steps, **kw):
+            return serialize.validate_row("c", status, serialize.serialize_steps(steps), **kw)
+        self.assertEqual(errors("INCOMPLETE", [finding, fix, verify]), [])
+        self.assertTrue(errors("COMPLETE", [finding, verify_ev]))              # only verification allowed
+        self.assertTrue(errors("COMPLETE", []))
+        self.assertTrue(errors("INCOMPLETE", [fix, verify]))                   # needs a finding
+        self.assertTrue(errors("INCOMPLETE", [finding, fix, verify_ev]))       # verify must not cite
+        late = dict(audit_at="2026-09-01T00:00:00Z", captured={"evidence_1": "2026-09-02T00:00:00Z"})
+        self.assertTrue(errors("COMPLETE", [verify_ev], **late))
+        self.assertEqual(errors("COMPLETE", [verify_ev], audit_at="2026-09-03T00:00:00Z",
+                                captured=late["captured"]), [])
+        unordered = json.dumps([dict(fix, step_no=1), dict(finding, step_no=2)])
+        self.assertTrue(serialize.validate_row("c", "INCOMPLETE", unordered))  # canonical order
+
     def test_gold_samples_are_valid_and_canonically_ordered(self):
         for row in io.read_csv(config.DATASET / "sample_output.csv"):
             self.assertEqual(serialize.validate_row(row["case_id"], row["deletion_status"], row["steps_json"]), [])

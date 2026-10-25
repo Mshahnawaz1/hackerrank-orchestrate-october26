@@ -64,7 +64,8 @@ def main() -> int:
             return 0
     rows = pipeline.run(requests)
 
-    errors = serialize.validate_output(rows, [r["case_id"] for r in requests])
+    captured = {m["file_id"]: m["captured_at"] for m in io.load_manifest()}
+    errors = serialize.validate_output(rows, requests, captured)
     if errors:
         print("\n".join(errors[:20]), file=sys.stderr)
         return 1

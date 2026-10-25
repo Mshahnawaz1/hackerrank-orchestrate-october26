@@ -19,8 +19,12 @@ def serialize_steps(steps: list[dict]) -> str:
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
 
 
-def validate_row(case_id: str, status: str, steps_json: str) -> list[str]:
-    """Return a list of contract violations (empty when valid)."""
+def validate_row(case_id: str, status: str, steps_json: str, audit_at: str | None = None,
+                 captured: dict | None = None) -> list[str]:
+    """Return a list of contract violations (empty when valid).
+
+    audit_at and captured (file_id -> captured_at) enable the evidence-time check.
+    """
     errs = []
     if status not in config.STATUSES:
         errs.append(f"{case_id}: bad status {status!r}")
@@ -28,11 +32,15 @@ def validate_row(case_id: str, status: str, steps_json: str) -> list[str]:
         steps = json.loads(steps_json)
     except json.JSONDecodeError as e:
         return errs + [f"{case_id}: steps_json invalid ({e})"]
-    if not isinstance(steps, list):
-        return errs + [f"{case_id}: steps_json not an array"]
+    if not isinstance(steps, list) or not all(isinstance(s, dict) for s in steps):
+        return errs + [f"{case_id}: steps_json must be an array of objects"]
     if status == "NOT_APPLICABLE" and steps:
         errs.append(f"{case_id}: NOT_APPLICABLE must have []")
-    last_rank = 0
+    if status == "COMPLETE" and (not steps or any(s.get("phase") != "VERIFICATION" for s in steps)):
+        errs.append(f"{case_id}: COMPLETE must have only VERIFICATION steps")
+    if status == "INCOMPLETE" and steps and not any(s.get("phase") == "FINDING" for s in steps):
+        errs.append(f"{case_id}: INCOMPLETE with steps must have a FINDING")
+
     seen = set()
     for i, s in enumerate(steps, 1):
         if set(s) != set(config.STEP_FIELDS):
@@ -40,33 +48,38 @@ def validate_row(case_id: str, status: str, steps_json: str) -> list[str]:
             continue
         if s["step_no"] != i:
             errs.append(f"{case_id}: step_no {s['step_no']} != {i}")
-        op = config.OPERATIONS.get(s["operation"])
-        if not op or op != (s["phase"], s["state"]):
+        if config.OPERATIONS.get(s["operation"]) != (s["phase"], s["state"]):
             errs.append(f"{case_id}: step {i} bad operation/phase/state")
         key = tuple(s[k] for k in config.STEP_FIELDS[1:])
         if key in seen:
             errs.append(f"{case_id}: step {i} duplicates an earlier step")
         seen.add(key)
-        rank = config.PHASE_RANK.get(s["phase"], -1)
-        if rank < last_rank:
-            errs.append(f"{case_id}: step {i} phase out of order")
-        last_rank = max(last_rank, rank)
-        needs_evidence = s["phase"] == "FINDING" or (
-            s["phase"] == "VERIFICATION" and status == "COMPLETE")
-        if needs_evidence and not s["evidence_id"]:
+
+        evidence = s["evidence_id"]
+        cites = s["phase"] == "FINDING" or (s["phase"] == "VERIFICATION" and status == "COMPLETE")
+        if cites and not evidence:
             errs.append(f"{case_id}: step {i} missing evidence_id")
-        if s["phase"] == "REMEDIATION" and s["evidence_id"]:
-            errs.append(f"{case_id}: step {i} remediation must have empty evidence_id")
+        if not cites and evidence:
+            errs.append(f"{case_id}: step {i} must have empty evidence_id")
+        if evidence and audit_at and captured and captured.get(evidence, "") > audit_at:
+            errs.append(f"{case_id}: step {i} cites {evidence} captured after audit_at")
+
+    ordered = all(s["phase"] in config.PHASE_RANK and s["operation"] in config.OP_RANK for s in steps)
+    if ordered and sort_steps(steps) != steps:
+        errs.append(f"{case_id}: steps not in canonical order")
     return errs
 
 
-def validate_output(rows: list[dict], request_ids: list[str]) -> list[str]:
+def validate_output(rows: list[dict], requests: list[dict], captured: dict | None = None) -> list[str]:
+    """requests: dicts with case_id and audit_at; captured: file_id -> captured_at."""
     errs = []
     ids = [r["case_id"] for r in rows]
     if ids != sorted(ids):
         errs.append("rows not sorted by case_id")
-    if sorted(ids) != sorted(request_ids) or len(set(ids)) != len(ids):
+    if sorted(ids) != sorted(r["case_id"] for r in requests) or len(set(ids)) != len(ids):
         errs.append("case_id set differs from requests")
+    audit_at = {r["case_id"]: r["audit_at"] for r in requests}
     for r in rows:
-        errs += validate_row(r["case_id"], r["deletion_status"], r["steps_json"])
+        errs += validate_row(r["case_id"], r["deletion_status"], r["steps_json"],
+                             audit_at.get(r["case_id"]), captured)
     return errs

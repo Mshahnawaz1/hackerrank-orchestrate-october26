@@ -513,3 +513,42 @@ branch=main
 repo_root=/home/frontier/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T23:23:40Z] Tighten output validators
+
+User Prompt (verbatim, secrets redacted):
+Lets tighten the validators. Dont over engineer.
+
+Agent Response Summary:
+Extended agent/serialize.py validation with the PRD 7.4-I invariants that were missing: COMPLETE must be non-empty and VERIFICATION-only, INCOMPLETE with steps needs a FINDING, evidence_id must be empty on every step that does not cite (remediation and INCOMPLETE verification), cited evidence must be captured at or before audit_at, and steps must be in canonical order. validate_output now takes the request dicts plus a file_id->captured_at map; main.py passes both. The gold sample output and the 518-row output both validate. 40 tests pass.
+
+Actions:
+* Edited code/agent/serialize.py, code/main.py, code/tests/test_serialize.py
+* Ran unit tests, full run and a validation of sample_output.csv
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T23:56:39Z] Create project README
+
+User Prompt (verbatim, secrets redacted):
+Create readme.md for the project.
+
+Agent Response Summary:
+Replaced the starter README.md with a project README: overview, pipeline and module table, setup (stdlib only; optional tesseract/OpenRouter for regenerating the extraction cache), run/evaluate/test commands, cache table, layout, measured sample results and known limitations. The evaluation and usage reports are not claimed because they are not written yet.
+
+Actions:
+* Wrote README.md (overwrote the starter README)
+
+Context:
+tool=Claude Code
+model=claude-sonnet-5-5
+branch=main
+repo_root=/home/frontier/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
